@@ -1,0 +1,2711 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//VSE Study Hub//Prototype//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:VŠE · Winter semester 2026/27
+X-WR-TIMEZONE:Europe/Prague
+BEGIN:VTIMEZONE
+TZID:Europe/Prague
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:om-L1@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20260921T110000
+DTEND;TZID=Europe/Prague:20260921T123000
+SUMMARY:OM Lecture: Introduction to operations
+LOCATION:NB 350 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 350 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Operations Management (3SG305) · Lecture\nWeek 1: Introductio
+ n to operations\nLecturer: doc. Ing. Jana Nováková\, Ph.D.\nRoom: NB 35
+ 0\, Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OM Lecture: Introduction to operations
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:micro-L1@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20260921T143000
+DTEND;TZID=Europe/Prague:20260921T160000
+SUMMARY:MICRO Lecture: Markets\, supply and demand
+LOCATION:NB 169 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 169 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Microeconomics I (5EN101) · Lecture\nWeek 1: Markets\, supply
+  and demand\nLecturer: prof. Ing. Tomáš Beneš\, CSc.\nRoom: NB 169\, N
+ ová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MICRO Lecture: Markets\, supply and demand
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stats-L1@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20260922T091500
+DTEND;TZID=Europe/Prague:20260922T104500
+SUMMARY:STAT Lecture: Descriptive statistics recap
+LOCATION:RB 101 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 101 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Statistics II (4ST201) · Lecture\nWeek 1: Descriptive statist
+ ics recap\nLecturer: Ing. Martin Dvořák\, Ph.D.\nRoom: RB 101\, Rajská
+  budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:STAT Lecture: Descriptive statistics recap
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mkt-L1@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20260922T124500
+DTEND;TZID=Europe/Prague:20260922T141500
+SUMMARY:MKT Lecture: Marketing concepts
+LOCATION:NB 350 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 350 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Marketing (3MG216) · Lecture\nWeek 1: Marketing concepts\nLec
+ turer: Ing. Klára Veselá\, Ph.D.\nRoom: NB 350\, Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MKT Lecture: Marketing concepts
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mkt-S1@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20260923T091500
+DTEND;TZID=Europe/Prague:20260923T104500
+SUMMARY:MKT Seminar: Marketing concepts
+LOCATION:SB 202 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 202 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Marketing (3MG216) · Seminar\nWeek 1: Marketing concepts\nTut
+ or: Ing. Jakub Pokorný\nRoom: SB 202\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MKT Seminar: Marketing concepts
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:om-S1@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20260923T124500
+DTEND;TZID=Europe/Prague:20260923T141500
+SUMMARY:OM Seminar: Introduction to operations
+LOCATION:RB 209 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 209 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Operations Management (3SG305) · Seminar\nWeek 1: Introductio
+ n to operations\nTutor: Ing. Petr Král\nRoom: RB 209\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OM Seminar: Introduction to operations
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:is-L1@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20260923T161500
+DTEND;TZID=Europe/Prague:20260923T174500
+SUMMARY:IS Lecture: Information systems in organisations
+LOCATION:RB 101 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 101 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Business Information Systems (4IT115) · Lecture\nWeek 1: Info
+ rmation systems in organisations\nLecturer: Ing. Ondřej Svoboda\, Ph.D.\
+ nRoom: RB 101\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IS Lecture: Information systems in organisations
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stats-S1@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20260924T110000
+DTEND;TZID=Europe/Prague:20260924T123000
+SUMMARY:STAT Seminar: Descriptive statistics recap
+LOCATION:SB 107 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 107 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Statistics II (4ST201) · Seminar\nWeek 1: Descriptive statist
+ ics recap\nTutor: Mgr. Eva Horáková\nRoom: SB 107\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:STAT Seminar: Descriptive statistics recap
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:micro-S1@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20260924T143000
+DTEND;TZID=Europe/Prague:20260924T160000
+SUMMARY:MICRO Seminar: Markets\, supply and demand
+LOCATION:RB 338 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 338 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Microeconomics I (5EN101) · Seminar\nWeek 1: Markets\, supply
+  and demand\nTutor: Ing. Lucie Marková\nRoom: RB 338\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MICRO Seminar: Markets\, supply and demand
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:is-S1@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20260925T091500
+DTEND;TZID=Europe/Prague:20260925T104500
+SUMMARY:IS Seminar: Information systems in organisations
+LOCATION:SB 324 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 324 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Business Information Systems (4IT115) · Seminar\nWeek 1: Info
+ rmation systems in organisations\nTutor: Ing. Tereza Malá\nRoom: SB 324\
+ , Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IS Seminar: Information systems in organisations
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:om-L2@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20260928T110000
+DTEND;TZID=Europe/Prague:20260928T123000
+SUMMARY:OM Lecture: Process analysis and flowcharts
+LOCATION:NB 350 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 350 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Operations Management (3SG305) · Lecture\nWeek 2: Process ana
+ lysis and flowcharts\nLecturer: doc. Ing. Jana Nováková\, Ph.D.\nRoom: 
+ NB 350\, Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OM Lecture: Process analysis and flowcharts
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:micro-L2@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20260928T143000
+DTEND;TZID=Europe/Prague:20260928T160000
+SUMMARY:MICRO Lecture: Elasticity
+LOCATION:NB 169 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 169 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Microeconomics I (5EN101) · Lecture\nWeek 2: Elasticity\nLect
+ urer: prof. Ing. Tomáš Beneš\, CSc.\nRoom: NB 169\, Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MICRO Lecture: Elasticity
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stats-L2@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20260929T091500
+DTEND;TZID=Europe/Prague:20260929T104500
+SUMMARY:STAT Lecture: Probability basics
+LOCATION:RB 101 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 101 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Statistics II (4ST201) · Lecture\nWeek 2: Probability basics\
+ nLecturer: Ing. Martin Dvořák\, Ph.D.\nRoom: RB 101\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:STAT Lecture: Probability basics
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mkt-L2@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20260929T124500
+DTEND;TZID=Europe/Prague:20260929T141500
+SUMMARY:MKT Lecture: The marketing environment
+LOCATION:NB 350 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 350 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Marketing (3MG216) · Lecture\nWeek 2: The marketing environme
+ nt\nLecturer: Ing. Klára Veselá\, Ph.D.\nRoom: NB 350\, Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MKT Lecture: The marketing environment
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mkt-S2@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20260930T091500
+DTEND;TZID=Europe/Prague:20260930T104500
+SUMMARY:MKT Seminar: The marketing environment
+LOCATION:SB 202 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 202 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Marketing (3MG216) · Seminar\nWeek 2: The marketing environme
+ nt\nTutor: Ing. Jakub Pokorný\nRoom: SB 202\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MKT Seminar: The marketing environment
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:om-S2@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20260930T124500
+DTEND;TZID=Europe/Prague:20260930T141500
+SUMMARY:OM Seminar: Process analysis and flowcharts
+LOCATION:RB 209 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 209 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Operations Management (3SG305) · Seminar\nWeek 2: Process ana
+ lysis and flowcharts\nTutor: Ing. Petr Král\nRoom: RB 209\, Rajská budo
+ va
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OM Seminar: Process analysis and flowcharts
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:is-L2@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20260930T161500
+DTEND;TZID=Europe/Prague:20260930T174500
+SUMMARY:IS Lecture: Business process modelling (BPMN)
+LOCATION:RB 101 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 101 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Business Information Systems (4IT115) · Lecture\nWeek 2: Busi
+ ness process modelling (BPMN)\nLecturer: Ing. Ondřej Svoboda\, Ph.D.\nRo
+ om: RB 101\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IS Lecture: Business process modelling (BPMN)
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stats-S2@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261001T110000
+DTEND;TZID=Europe/Prague:20261001T123000
+SUMMARY:STAT Seminar: Probability basics
+LOCATION:SB 107 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 107 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Statistics II (4ST201) · Seminar\nWeek 2: Probability basics\
+ nTutor: Mgr. Eva Horáková\nRoom: SB 107\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:STAT Seminar: Probability basics
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:micro-S2@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261001T143000
+DTEND;TZID=Europe/Prague:20261001T160000
+SUMMARY:MICRO Seminar: Elasticity
+LOCATION:RB 338 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 338 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Microeconomics I (5EN101) · Seminar\nWeek 2: Elasticity\nTuto
+ r: Ing. Lucie Marková\nRoom: RB 338\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MICRO Seminar: Elasticity
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:is-S2@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261002T091500
+DTEND;TZID=Europe/Prague:20261002T104500
+SUMMARY:IS Seminar: Business process modelling (BPMN)
+LOCATION:SB 324 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 324 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Business Information Systems (4IT115) · Seminar\nWeek 2: Busi
+ ness process modelling (BPMN)\nTutor: Ing. Tereza Malá\nRoom: SB 324\, S
+ tará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IS Seminar: Business process modelling (BPMN)
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:om-L3@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261005T110000
+DTEND;TZID=Europe/Prague:20261005T123000
+SUMMARY:OM Lecture: Capacity planning
+LOCATION:NB 350 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 350 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Operations Management (3SG305) · Lecture\nWeek 3: Capacity pl
+ anning\nLecturer: doc. Ing. Jana Nováková\, Ph.D.\nRoom: NB 350\, Nová
+  budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OM Lecture: Capacity planning
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:micro-L3@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261005T143000
+DTEND;TZID=Europe/Prague:20261005T160000
+SUMMARY:MICRO Lecture: Consumer choice
+LOCATION:NB 169 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 169 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Microeconomics I (5EN101) · Lecture\nWeek 3: Consumer choice\
+ nLecturer: prof. Ing. Tomáš Beneš\, CSc.\nRoom: NB 169\, Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MICRO Lecture: Consumer choice
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stats-L3@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261006T091500
+DTEND;TZID=Europe/Prague:20261006T104500
+SUMMARY:STAT Lecture: Random variables
+LOCATION:RB 101 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 101 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Statistics II (4ST201) · Lecture\nWeek 3: Random variables\nL
+ ecturer: Ing. Martin Dvořák\, Ph.D.\nRoom: RB 101\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:STAT Lecture: Random variables
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mkt-L3@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261006T124500
+DTEND;TZID=Europe/Prague:20261006T141500
+SUMMARY:MKT Lecture: Consumer behaviour
+LOCATION:NB 350 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 350 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Marketing (3MG216) · Lecture\nWeek 3: Consumer behaviour\nLec
+ turer: Ing. Klára Veselá\, Ph.D.\nRoom: NB 350\, Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MKT Lecture: Consumer behaviour
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mkt-S3@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261007T091500
+DTEND;TZID=Europe/Prague:20261007T104500
+SUMMARY:MKT Seminar: Consumer behaviour
+LOCATION:SB 202 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 202 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Marketing (3MG216) · Seminar\nWeek 3: Consumer behaviour\nTut
+ or: Ing. Jakub Pokorný\nRoom: SB 202\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MKT Seminar: Consumer behaviour
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:om-S3@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261007T124500
+DTEND;TZID=Europe/Prague:20261007T141500
+SUMMARY:OM Seminar: Capacity planning
+LOCATION:RB 209 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 209 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Operations Management (3SG305) · Seminar\nWeek 3: Capacity pl
+ anning\nTutor: Ing. Petr Král\nRoom: RB 209\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OM Seminar: Capacity planning
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:is-L3@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261007T161500
+DTEND;TZID=Europe/Prague:20261007T174500
+SUMMARY:IS Lecture: Data and databases
+LOCATION:RB 101 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 101 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Business Information Systems (4IT115) · Lecture\nWeek 3: Data
+  and databases\nLecturer: Ing. Ondřej Svoboda\, Ph.D.\nRoom: RB 101\, Ra
+ jská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IS Lecture: Data and databases
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stats-S3@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261008T110000
+DTEND;TZID=Europe/Prague:20261008T123000
+SUMMARY:STAT Seminar: Random variables
+LOCATION:SB 107 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 107 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Statistics II (4ST201) · Seminar\nWeek 3: Random variables\nT
+ utor: Mgr. Eva Horáková\nRoom: SB 107\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:STAT Seminar: Random variables
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:micro-S3@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261008T143000
+DTEND;TZID=Europe/Prague:20261008T160000
+SUMMARY:MICRO Seminar: Consumer choice
+LOCATION:RB 338 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 338 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Microeconomics I (5EN101) · Seminar\nWeek 3: Consumer choice\
+ nTutor: Ing. Lucie Marková\nRoom: RB 338\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MICRO Seminar: Consumer choice
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:is-S3@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261009T091500
+DTEND;TZID=Europe/Prague:20261009T104500
+SUMMARY:IS Seminar: Data and databases
+LOCATION:SB 324 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 324 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Business Information Systems (4IT115) · Seminar\nWeek 3: Data
+  and databases\nTutor: Ing. Tereza Malá\nRoom: SB 324\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IS Seminar: Data and databases
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:om-L4@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261012T110000
+DTEND;TZID=Europe/Prague:20261012T123000
+SUMMARY:OM Lecture: Demand forecasting
+LOCATION:NB 350 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 350 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Operations Management (3SG305) · Lecture\nWeek 4: Demand fore
+ casting\nLecturer: doc. Ing. Jana Nováková\, Ph.D.\nRoom: NB 350\, Nov
+ á budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OM Lecture: Demand forecasting
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:micro-L4@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261012T143000
+DTEND;TZID=Europe/Prague:20261012T160000
+SUMMARY:MICRO Lecture: Production
+LOCATION:NB 169 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 169 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Microeconomics I (5EN101) · Lecture\nWeek 4: Production\nLect
+ urer: prof. Ing. Tomáš Beneš\, CSc.\nRoom: NB 169\, Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MICRO Lecture: Production
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stats-L4@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261013T091500
+DTEND;TZID=Europe/Prague:20261013T104500
+SUMMARY:STAT Lecture: Discrete distributions
+LOCATION:RB 101 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 101 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Statistics II (4ST201) · Lecture\nWeek 4: Discrete distributi
+ ons\nLecturer: Ing. Martin Dvořák\, Ph.D.\nRoom: RB 101\, Rajská budov
+ a
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:STAT Lecture: Discrete distributions
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mkt-L4@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261013T124500
+DTEND;TZID=Europe/Prague:20261013T141500
+SUMMARY:MKT Lecture: Market research
+LOCATION:NB 350 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 350 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Marketing (3MG216) · Lecture\nWeek 4: Market research\nLectur
+ er: Ing. Klára Veselá\, Ph.D.\nRoom: NB 350\, Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MKT Lecture: Market research
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mkt-S4@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261014T091500
+DTEND;TZID=Europe/Prague:20261014T104500
+SUMMARY:MKT Seminar: Market research
+LOCATION:SB 202 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 202 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Marketing (3MG216) · Seminar\nWeek 4: Market research\nTutor:
+  Ing. Jakub Pokorný\nRoom: SB 202\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MKT Seminar: Market research
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:om-S4@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261014T124500
+DTEND;TZID=Europe/Prague:20261014T141500
+SUMMARY:OM Seminar: Demand forecasting
+LOCATION:RB 209 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 209 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Operations Management (3SG305) · Seminar\nWeek 4: Demand fore
+ casting\nTutor: Ing. Petr Král\nRoom: RB 209\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OM Seminar: Demand forecasting
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:is-L4@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261014T161500
+DTEND;TZID=Europe/Prague:20261014T174500
+SUMMARY:IS Lecture: SQL basics
+LOCATION:RB 101 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 101 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Business Information Systems (4IT115) · Lecture\nWeek 4: SQL 
+ basics\nLecturer: Ing. Ondřej Svoboda\, Ph.D.\nRoom: RB 101\, Rajská bu
+ dova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IS Lecture: SQL basics
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stats-S4@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261015T110000
+DTEND;TZID=Europe/Prague:20261015T123000
+SUMMARY:STAT Seminar: Discrete distributions
+LOCATION:SB 107 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 107 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Statistics II (4ST201) · Seminar\nWeek 4: Discrete distributi
+ ons\nTutor: Mgr. Eva Horáková\nRoom: SB 107\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:STAT Seminar: Discrete distributions
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:micro-S4@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261015T143000
+DTEND;TZID=Europe/Prague:20261015T160000
+SUMMARY:MICRO Seminar: Production
+LOCATION:RB 338 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 338 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Microeconomics I (5EN101) · Seminar\nWeek 4: Production\nTuto
+ r: Ing. Lucie Marková\nRoom: RB 338\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MICRO Seminar: Production
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:is-S4@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261016T091500
+DTEND;TZID=Europe/Prague:20261016T104500
+SUMMARY:IS Seminar: SQL basics
+LOCATION:SB 324 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 324 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Business Information Systems (4IT115) · Seminar\nWeek 4: SQL 
+ basics\nTutor: Ing. Tereza Malá\nRoom: SB 324\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IS Seminar: SQL basics
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:om-L5@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261019T110000
+DTEND;TZID=Europe/Prague:20261019T123000
+SUMMARY:OM Lecture: Inventory management (EOQ)
+LOCATION:NB 350 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 350 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Operations Management (3SG305) · Lecture\nWeek 5: Inventory m
+ anagement (EOQ)\nLecturer: doc. Ing. Jana Nováková\, Ph.D.\nRoom: NB 35
+ 0\, Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OM Lecture: Inventory management (EOQ)
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:micro-L5@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261019T143000
+DTEND;TZID=Europe/Prague:20261019T160000
+SUMMARY:MICRO Lecture: Costs
+LOCATION:NB 169 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 169 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Microeconomics I (5EN101) · Lecture\nWeek 5: Costs\nLecturer:
+  prof. Ing. Tomáš Beneš\, CSc.\nRoom: NB 169\, Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MICRO Lecture: Costs
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stats-L5@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261020T091500
+DTEND;TZID=Europe/Prague:20261020T104500
+SUMMARY:STAT Lecture: Normal distribution
+LOCATION:RB 101 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 101 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Statistics II (4ST201) · Lecture\nWeek 5: Normal distribution
+ \nLecturer: Ing. Martin Dvořák\, Ph.D.\nRoom: RB 101\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:STAT Lecture: Normal distribution
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mkt-L5@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261020T124500
+DTEND;TZID=Europe/Prague:20261020T141500
+SUMMARY:MKT Lecture: Segmentation and targeting
+LOCATION:NB 350 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 350 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Marketing (3MG216) · Lecture\nWeek 5: Segmentation and target
+ ing\nLecturer: Ing. Klára Veselá\, Ph.D.\nRoom: NB 350\, Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MKT Lecture: Segmentation and targeting
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mkt-S5@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261021T091500
+DTEND;TZID=Europe/Prague:20261021T104500
+SUMMARY:MKT Seminar: Segmentation and targeting
+LOCATION:SB 202 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 202 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Marketing (3MG216) · Seminar\nWeek 5: Segmentation and target
+ ing\nTutor: Ing. Jakub Pokorný\nRoom: SB 202\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MKT Seminar: Segmentation and targeting
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:om-S5@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261021T124500
+DTEND;TZID=Europe/Prague:20261021T141500
+SUMMARY:OM Seminar: Inventory management (EOQ)
+LOCATION:RB 209 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 209 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Operations Management (3SG305) · Seminar\nWeek 5: Inventory m
+ anagement (EOQ)\nTutor: Ing. Petr Král\nRoom: RB 209\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OM Seminar: Inventory management (EOQ)
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:is-L5@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261021T161500
+DTEND;TZID=Europe/Prague:20261021T174500
+SUMMARY:IS Lecture: ERP systems
+LOCATION:RB 101 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 101 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Business Information Systems (4IT115) · Lecture\nWeek 5: ERP 
+ systems\nLecturer: Ing. Ondřej Svoboda\, Ph.D.\nRoom: RB 101\, Rajská b
+ udova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IS Lecture: ERP systems
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stats-S5@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261022T110000
+DTEND;TZID=Europe/Prague:20261022T123000
+SUMMARY:STAT Seminar: Normal distribution
+LOCATION:SB 107 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 107 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Statistics II (4ST201) · Seminar\nWeek 5: Normal distribution
+ \nTutor: Mgr. Eva Horáková\nRoom: SB 107\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:STAT Seminar: Normal distribution
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:micro-S5@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261022T143000
+DTEND;TZID=Europe/Prague:20261022T160000
+SUMMARY:MICRO Seminar: Costs
+LOCATION:RB 338 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 338 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Microeconomics I (5EN101) · Seminar\nWeek 5: Costs\nTutor: In
+ g. Lucie Marková\nRoom: RB 338\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MICRO Seminar: Costs
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:is-S5@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261023T091500
+DTEND;TZID=Europe/Prague:20261023T104500
+SUMMARY:IS Seminar: ERP systems
+LOCATION:SB 324 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 324 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Business Information Systems (4IT115) · Seminar\nWeek 5: ERP 
+ systems\nTutor: Ing. Tereza Malá\nRoom: SB 324\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IS Seminar: ERP systems
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:om-L6@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261026T110000
+DTEND;TZID=Europe/Prague:20261026T123000
+SUMMARY:OM Lecture: Lean production and JIT
+LOCATION:NB 350 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 350 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Operations Management (3SG305) · Lecture\nWeek 6: Lean produc
+ tion and JIT\nLecturer: doc. Ing. Jana Nováková\, Ph.D.\nRoom: NB 350\,
+  Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OM Lecture: Lean production and JIT
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:micro-L6@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261026T143000
+DTEND;TZID=Europe/Prague:20261026T160000
+SUMMARY:MICRO Lecture: Perfect competition
+LOCATION:NB 169 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 169 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Microeconomics I (5EN101) · Lecture\nWeek 6: Perfect competit
+ ion\nLecturer: prof. Ing. Tomáš Beneš\, CSc.\nRoom: NB 169\, Nová bud
+ ova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MICRO Lecture: Perfect competition
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stats-L6@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261027T091500
+DTEND;TZID=Europe/Prague:20261027T104500
+SUMMARY:STAT Lecture: Sampling and the central limit theorem
+LOCATION:RB 101 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 101 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Statistics II (4ST201) · Lecture\nWeek 6: Sampling and the ce
+ ntral limit theorem\nLecturer: Ing. Martin Dvořák\, Ph.D.\nRoom: RB 101
+ \, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:STAT Lecture: Sampling and the central limit theorem
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mkt-L6@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261027T124500
+DTEND;TZID=Europe/Prague:20261027T141500
+SUMMARY:MKT Lecture: Positioning and brand
+LOCATION:NB 350 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 350 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Marketing (3MG216) · Lecture\nWeek 6: Positioning and brand\n
+ Lecturer: Ing. Klára Veselá\, Ph.D.\nRoom: NB 350\, Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MKT Lecture: Positioning and brand
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stats-S6@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261029T110000
+DTEND;TZID=Europe/Prague:20261029T123000
+SUMMARY:STAT Seminar: Sampling and the central limit theorem
+LOCATION:SB 107 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 107 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Statistics II (4ST201) · Seminar\nWeek 6: Sampling and the ce
+ ntral limit theorem\nTutor: Mgr. Eva Horáková\nRoom: SB 107\, Stará bu
+ dova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:STAT Seminar: Sampling and the central limit theorem
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:micro-S6@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261029T143000
+DTEND;TZID=Europe/Prague:20261029T160000
+SUMMARY:MICRO Seminar: Perfect competition
+LOCATION:RB 338 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 338 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Microeconomics I (5EN101) · Seminar\nWeek 6: Perfect competit
+ ion\nTutor: Ing. Lucie Marková\nRoom: RB 338\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MICRO Seminar: Perfect competition
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:is-S6@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261030T091500
+DTEND;TZID=Europe/Prague:20261030T104500
+SUMMARY:IS Seminar: CRM and supply chain systems
+LOCATION:SB 324 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 324 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Business Information Systems (4IT115) · Seminar\nWeek 6: CRM 
+ and supply chain systems\nTutor: Ing. Tereza Malá\nRoom: SB 324\, Stará
+  budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IS Seminar: CRM and supply chain systems
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:om-L7@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261102T110000
+DTEND;TZID=Europe/Prague:20261102T123000
+SUMMARY:OM Lecture: Quality management and Six Sigma
+LOCATION:NB 350 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 350 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Operations Management (3SG305) · Lecture\nWeek 7: Quality man
+ agement and Six Sigma\nLecturer: doc. Ing. Jana Nováková\, Ph.D.\nRoom:
+  NB 350\, Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OM Lecture: Quality management and Six Sigma
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:micro-L7@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261102T143000
+DTEND;TZID=Europe/Prague:20261102T160000
+SUMMARY:MICRO Lecture: Monopoly
+LOCATION:NB 169 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 169 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Microeconomics I (5EN101) · Lecture\nWeek 7: Monopoly\nLectur
+ er: prof. Ing. Tomáš Beneš\, CSc.\nRoom: NB 169\, Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MICRO Lecture: Monopoly
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stats-L7@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261103T091500
+DTEND;TZID=Europe/Prague:20261103T104500
+SUMMARY:STAT Lecture: Confidence intervals
+LOCATION:RB 101 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 101 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Statistics II (4ST201) · Lecture\nWeek 7: Confidence interval
+ s\nLecturer: Ing. Martin Dvořák\, Ph.D.\nRoom: RB 101\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:STAT Lecture: Confidence intervals
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mkt-L7@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261103T124500
+DTEND;TZID=Europe/Prague:20261103T141500
+SUMMARY:MKT Lecture: Product decisions
+LOCATION:NB 350 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 350 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Marketing (3MG216) · Lecture\nWeek 7: Product decisions\nLect
+ urer: Ing. Klára Veselá\, Ph.D.\nRoom: NB 350\, Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MKT Lecture: Product decisions
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mkt-S7@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261104T091500
+DTEND;TZID=Europe/Prague:20261104T104500
+SUMMARY:MKT Seminar: Product decisions
+LOCATION:SB 202 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 202 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Marketing (3MG216) · Seminar\nWeek 7: Product decisions\nTuto
+ r: Ing. Jakub Pokorný\nRoom: SB 202\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MKT Seminar: Product decisions
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:om-S7@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261104T124500
+DTEND;TZID=Europe/Prague:20261104T141500
+SUMMARY:OM Seminar: Quality management and Six Sigma
+LOCATION:RB 209 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 209 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Operations Management (3SG305) · Seminar\nWeek 7: Quality man
+ agement and Six Sigma\nTutor: Ing. Petr Král\nRoom: RB 209\, Rajská bud
+ ova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OM Seminar: Quality management and Six Sigma
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:is-L7@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261104T161500
+DTEND;TZID=Europe/Prague:20261104T174500
+SUMMARY:IS Lecture: Cloud and SaaS
+LOCATION:RB 101 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 101 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Business Information Systems (4IT115) · Lecture\nWeek 7: Clou
+ d and SaaS\nLecturer: Ing. Ondřej Svoboda\, Ph.D.\nRoom: RB 101\, Rajsk
+ á budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IS Lecture: Cloud and SaaS
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stats-S7@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261105T110000
+DTEND;TZID=Europe/Prague:20261105T123000
+SUMMARY:STAT Seminar: Confidence intervals
+LOCATION:SB 107 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 107 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Statistics II (4ST201) · Seminar\nWeek 7: Confidence interval
+ s\nNote: Midterm test (45 min). Bring a calculator and your ISIC card.\nT
+ utor: Mgr. Eva Horáková\nRoom: SB 107\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:STAT Seminar: Confidence intervals
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:micro-S7@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261105T143000
+DTEND;TZID=Europe/Prague:20261105T160000
+SUMMARY:MICRO Seminar: Monopoly
+LOCATION:RB 338 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 338 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Microeconomics I (5EN101) · Seminar\nWeek 7: Monopoly\nTutor:
+  Ing. Lucie Marková\nRoom: RB 338\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MICRO Seminar: Monopoly
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:is-S7@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261106T091500
+DTEND;TZID=Europe/Prague:20261106T104500
+SUMMARY:IS Seminar: Cloud and SaaS
+LOCATION:SB 324 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 324 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Business Information Systems (4IT115) · Seminar\nWeek 7: Clou
+ d and SaaS\nTutor: Ing. Tereza Malá\nRoom: SB 324\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IS Seminar: Cloud and SaaS
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:om-L8@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261109T110000
+DTEND;TZID=Europe/Prague:20261109T123000
+SUMMARY:OM Lecture: Supply chain design
+LOCATION:NB 350 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 350 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Operations Management (3SG305) · Lecture\nWeek 8: Supply chai
+ n design\nLecturer: doc. Ing. Jana Nováková\, Ph.D.\nRoom: NB 350\, Nov
+ á budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OM Lecture: Supply chain design
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:micro-L8@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261109T143000
+DTEND;TZID=Europe/Prague:20261109T160000
+SUMMARY:MICRO Lecture: Oligopoly and game theory
+LOCATION:NB 169 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 169 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Microeconomics I (5EN101) · Lecture\nWeek 8: Oligopoly and ga
+ me theory\nLecturer: prof. Ing. Tomáš Beneš\, CSc.\nRoom: NB 169\, Nov
+ á budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MICRO Lecture: Oligopoly and game theory
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stats-L8@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261110T091500
+DTEND;TZID=Europe/Prague:20261110T104500
+SUMMARY:STAT Lecture: Hypothesis testing I
+LOCATION:RB 101 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 101 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Statistics II (4ST201) · Lecture\nWeek 8: Hypothesis testing 
+ I\nLecturer: Ing. Martin Dvořák\, Ph.D.\nRoom: RB 101\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:STAT Lecture: Hypothesis testing I
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mkt-L8@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261110T124500
+DTEND;TZID=Europe/Prague:20261110T141500
+SUMMARY:MKT Lecture: Pricing
+LOCATION:NB 350 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 350 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Marketing (3MG216) · Lecture\nWeek 8: Pricing\nLecturer: Ing.
+  Klára Veselá\, Ph.D.\nRoom: NB 350\, Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MKT Lecture: Pricing
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mkt-S8@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261111T091500
+DTEND;TZID=Europe/Prague:20261111T104500
+SUMMARY:MKT Seminar: Pricing
+LOCATION:SB 202 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 202 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Marketing (3MG216) · Seminar\nWeek 8: Pricing\nTutor: Ing. Ja
+ kub Pokorný\nRoom: SB 202\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MKT Seminar: Pricing
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:om-S8@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261111T124500
+DTEND;TZID=Europe/Prague:20261111T141500
+SUMMARY:OM Seminar: Supply chain design
+LOCATION:RB 209 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 209 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Operations Management (3SG305) · Seminar\nWeek 8: Supply chai
+ n design\nTutor: Ing. Petr Král\nRoom: RB 209\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OM Seminar: Supply chain design
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:is-L8@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261111T161500
+DTEND;TZID=Europe/Prague:20261111T174500
+SUMMARY:IS Lecture: Business intelligence
+LOCATION:RB 101 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 101 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Business Information Systems (4IT115) · Lecture\nWeek 8: Busi
+ ness intelligence\nLecturer: Ing. Ondřej Svoboda\, Ph.D.\nRoom: RB 101\,
+  Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IS Lecture: Business intelligence
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stats-S8@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261112T110000
+DTEND;TZID=Europe/Prague:20261112T123000
+SUMMARY:STAT Seminar: Hypothesis testing I
+LOCATION:SB 107 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 107 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Statistics II (4ST201) · Seminar\nWeek 8: Hypothesis testing 
+ I\nTutor: Mgr. Eva Horáková\nRoom: SB 107\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:STAT Seminar: Hypothesis testing I
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:micro-S8@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261112T143000
+DTEND;TZID=Europe/Prague:20261112T160000
+SUMMARY:MICRO Seminar: Oligopoly and game theory
+LOCATION:RB 338 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 338 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Microeconomics I (5EN101) · Seminar\nWeek 8: Oligopoly and ga
+ me theory\nTutor: Ing. Lucie Marková\nRoom: RB 338\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MICRO Seminar: Oligopoly and game theory
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:is-S8@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261113T091500
+DTEND;TZID=Europe/Prague:20261113T104500
+SUMMARY:IS Seminar: Business intelligence
+LOCATION:SB 324 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 324 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Business Information Systems (4IT115) · Seminar\nWeek 8: Busi
+ ness intelligence\nTutor: Ing. Tereza Malá\nRoom: SB 324\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IS Seminar: Business intelligence
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:om-L9@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261116T110000
+DTEND;TZID=Europe/Prague:20261116T123000
+SUMMARY:OM Lecture: Scheduling and sequencing
+LOCATION:NB 350 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 350 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Operations Management (3SG305) · Lecture\nWeek 9: Scheduling 
+ and sequencing\nLecturer: doc. Ing. Jana Nováková\, Ph.D.\nRoom: NB 350
+ \, Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OM Lecture: Scheduling and sequencing
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:micro-L9@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261116T143000
+DTEND;TZID=Europe/Prague:20261116T160000
+SUMMARY:MICRO Lecture: Monopolistic competition
+LOCATION:NB 169 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 169 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Microeconomics I (5EN101) · Lecture\nWeek 9: Monopolistic com
+ petition\nLecturer: prof. Ing. Tomáš Beneš\, CSc.\nRoom: NB 169\, Nov
+ á budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MICRO Lecture: Monopolistic competition
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mkt-S9@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261118T091500
+DTEND;TZID=Europe/Prague:20261118T104500
+SUMMARY:MKT Seminar: Distribution channels
+LOCATION:SB 202 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 202 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Marketing (3MG216) · Seminar\nWeek 9: Distribution channels\n
+ Tutor: Ing. Jakub Pokorný\nRoom: SB 202\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MKT Seminar: Distribution channels
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:om-S9@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261118T124500
+DTEND;TZID=Europe/Prague:20261118T141500
+SUMMARY:OM Seminar: Scheduling and sequencing
+LOCATION:RB 209 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 209 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Operations Management (3SG305) · Seminar\nWeek 9: Scheduling 
+ and sequencing\nTutor: Ing. Petr Král\nRoom: RB 209\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OM Seminar: Scheduling and sequencing
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:is-L9@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261118T161500
+DTEND;TZID=Europe/Prague:20261118T174500
+SUMMARY:IS Lecture: IT security
+LOCATION:RB 101 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 101 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Business Information Systems (4IT115) · Lecture\nWeek 9: IT s
+ ecurity\nLecturer: Ing. Ondřej Svoboda\, Ph.D.\nRoom: RB 101\, Rajská b
+ udova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IS Lecture: IT security
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stats-S9@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261119T110000
+DTEND;TZID=Europe/Prague:20261119T123000
+SUMMARY:STAT Seminar: Hypothesis testing II
+LOCATION:SB 107 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 107 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Statistics II (4ST201) · Seminar\nWeek 9: Hypothesis testing 
+ II\nTutor: Mgr. Eva Horáková\nRoom: SB 107\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:STAT Seminar: Hypothesis testing II
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:micro-S9@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261119T143000
+DTEND;TZID=Europe/Prague:20261119T160000
+SUMMARY:MICRO Seminar: Monopolistic competition
+LOCATION:RB 338 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 338 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Microeconomics I (5EN101) · Seminar\nWeek 9: Monopolistic com
+ petition\nTutor: Ing. Lucie Marková\nRoom: RB 338\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MICRO Seminar: Monopolistic competition
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:is-S9@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261120T091500
+DTEND;TZID=Europe/Prague:20261120T104500
+SUMMARY:IS Seminar: IT security
+LOCATION:SB 324 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 324 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Business Information Systems (4IT115) · Seminar\nWeek 9: IT s
+ ecurity\nTutor: Ing. Tereza Malá\nRoom: SB 324\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IS Seminar: IT security
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:om-L10@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261123T110000
+DTEND;TZID=Europe/Prague:20261123T123000
+SUMMARY:OM Lecture: Project management (CPM/PERT)
+LOCATION:NB 350 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 350 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Operations Management (3SG305) · Lecture\nWeek 10: Project ma
+ nagement (CPM/PERT)\nLecturer: doc. Ing. Jana Nováková\, Ph.D.\nRoom: N
+ B 350\, Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OM Lecture: Project management (CPM/PERT)
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:micro-L10@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261123T143000
+DTEND;TZID=Europe/Prague:20261123T160000
+SUMMARY:MICRO Lecture: Factor markets
+LOCATION:NB 169 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 169 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Microeconomics I (5EN101) · Lecture\nWeek 10: Factor markets\
+ nLecturer: prof. Ing. Tomáš Beneš\, CSc.\nRoom: NB 169\, Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MICRO Lecture: Factor markets
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stats-L10@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261124T091500
+DTEND;TZID=Europe/Prague:20261124T104500
+SUMMARY:STAT Lecture: Chi-square tests
+LOCATION:RB 101 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 101 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Statistics II (4ST201) · Lecture\nWeek 10: Chi-square tests\n
+ Lecturer: Ing. Martin Dvořák\, Ph.D.\nRoom: RB 101\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:STAT Lecture: Chi-square tests
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mkt-L10@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261124T124500
+DTEND;TZID=Europe/Prague:20261124T141500
+SUMMARY:MKT Lecture: Marketing communication
+LOCATION:NB 350 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 350 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Marketing (3MG216) · Lecture\nWeek 10: Marketing communicatio
+ n\nLecturer: Ing. Klára Veselá\, Ph.D.\nRoom: NB 350\, Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MKT Lecture: Marketing communication
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mkt-S10@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261125T091500
+DTEND;TZID=Europe/Prague:20261125T104500
+SUMMARY:MKT Seminar: Marketing communication
+LOCATION:SB 202 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 202 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Marketing (3MG216) · Seminar\nWeek 10: Marketing communicatio
+ n\nTutor: Ing. Jakub Pokorný\nRoom: SB 202\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MKT Seminar: Marketing communication
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:om-S10@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261125T124500
+DTEND;TZID=Europe/Prague:20261125T141500
+SUMMARY:OM Seminar: Project management (CPM/PERT)
+LOCATION:RB 209 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 209 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Operations Management (3SG305) · Seminar\nWeek 10: Project ma
+ nagement (CPM/PERT)\nTutor: Ing. Petr Král\nRoom: RB 209\, Rajská budov
+ a
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OM Seminar: Project management (CPM/PERT)
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:is-L10@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261125T161500
+DTEND;TZID=Europe/Prague:20261125T174500
+SUMMARY:IS Lecture: IT project management
+LOCATION:RB 101 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 101 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Business Information Systems (4IT115) · Lecture\nWeek 10: IT 
+ project management\nLecturer: Ing. Ondřej Svoboda\, Ph.D.\nRoom: RB 101\
+ , Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IS Lecture: IT project management
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stats-S10@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261126T110000
+DTEND;TZID=Europe/Prague:20261126T123000
+SUMMARY:STAT Seminar: Chi-square tests
+LOCATION:SB 107 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 107 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Statistics II (4ST201) · Seminar\nWeek 10: Chi-square tests\n
+ Tutor: Mgr. Eva Horáková\nRoom: SB 107\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:STAT Seminar: Chi-square tests
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:micro-S10@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261126T143000
+DTEND;TZID=Europe/Prague:20261126T160000
+SUMMARY:MICRO Seminar: Factor markets
+LOCATION:RB 338 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 338 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Microeconomics I (5EN101) · Seminar\nWeek 10: Factor markets\
+ nTutor: Ing. Lucie Marková\nRoom: RB 338\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MICRO Seminar: Factor markets
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:is-S10@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261127T091500
+DTEND;TZID=Europe/Prague:20261127T104500
+SUMMARY:IS Seminar: IT project management
+LOCATION:SB 324 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 324 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Business Information Systems (4IT115) · Seminar\nWeek 10: IT 
+ project management\nTutor: Ing. Tereza Malá\nRoom: SB 324\, Stará budov
+ a
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IS Seminar: IT project management
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:om-L11@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261130T110000
+DTEND;TZID=Europe/Prague:20261130T123000
+SUMMARY:OM Lecture: Service operations and queues
+LOCATION:NB 350 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 350 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Operations Management (3SG305) · Lecture\nWeek 11: Service op
+ erations and queues\nLecturer: doc. Ing. Jana Nováková\, Ph.D.\nRoom: N
+ B 350\, Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OM Lecture: Service operations and queues
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:micro-L11@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261130T143000
+DTEND;TZID=Europe/Prague:20261130T160000
+SUMMARY:MICRO Lecture: Externalities
+LOCATION:NB 169 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 169 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Microeconomics I (5EN101) · Lecture\nWeek 11: Externalities\n
+ Lecturer: prof. Ing. Tomáš Beneš\, CSc.\nRoom: NB 169\, Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MICRO Lecture: Externalities
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stats-L11@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261201T091500
+DTEND;TZID=Europe/Prague:20261201T104500
+SUMMARY:STAT Lecture: Correlation
+LOCATION:RB 101 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 101 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Statistics II (4ST201) · Lecture\nWeek 11: Correlation\nLectu
+ rer: Ing. Martin Dvořák\, Ph.D.\nRoom: RB 101\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:STAT Lecture: Correlation
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mkt-L11@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261201T124500
+DTEND;TZID=Europe/Prague:20261201T141500
+SUMMARY:MKT Lecture: Digital marketing
+LOCATION:NB 350 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 350 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Marketing (3MG216) · Lecture\nWeek 11: Digital marketing\nLec
+ turer: Ing. Klára Veselá\, Ph.D.\nRoom: NB 350\, Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MKT Lecture: Digital marketing
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mkt-S11@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261202T091500
+DTEND;TZID=Europe/Prague:20261202T104500
+SUMMARY:MKT Seminar: Digital marketing
+LOCATION:SB 202 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 202 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Marketing (3MG216) · Seminar\nWeek 11: Digital marketing\nTut
+ or: Ing. Jakub Pokorný\nRoom: SB 202\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MKT Seminar: Digital marketing
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:om-S11@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261202T124500
+DTEND;TZID=Europe/Prague:20261202T141500
+SUMMARY:OM Seminar: Service operations and queues
+LOCATION:RB 209 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 209 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Operations Management (3SG305) · Seminar\nWeek 11: Service op
+ erations and queues\nTutor: Ing. Petr Král\nRoom: RB 209\, Rajská budov
+ a
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OM Seminar: Service operations and queues
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:is-L11@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261202T161500
+DTEND;TZID=Europe/Prague:20261202T174500
+SUMMARY:IS Lecture: Digital transformation
+LOCATION:RB 101 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 101 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Business Information Systems (4IT115) · Lecture\nWeek 11: Dig
+ ital transformation\nLecturer: Ing. Ondřej Svoboda\, Ph.D.\nRoom: RB 101
+ \, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IS Lecture: Digital transformation
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stats-S11@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261203T110000
+DTEND;TZID=Europe/Prague:20261203T123000
+SUMMARY:STAT Seminar: Correlation
+LOCATION:SB 107 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 107 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Statistics II (4ST201) · Seminar\nWeek 11: Correlation\nTutor
+ : Mgr. Eva Horáková\nRoom: SB 107\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:STAT Seminar: Correlation
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:micro-S11@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261203T143000
+DTEND;TZID=Europe/Prague:20261203T160000
+SUMMARY:MICRO Seminar: Externalities
+LOCATION:RB 338 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 338 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Microeconomics I (5EN101) · Seminar\nWeek 11: Externalities\n
+ Tutor: Ing. Lucie Marková\nRoom: RB 338\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MICRO Seminar: Externalities
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:is-S11@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261204T091500
+DTEND;TZID=Europe/Prague:20261204T104500
+SUMMARY:IS Seminar: Digital transformation
+LOCATION:SB 324 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 324 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Business Information Systems (4IT115) · Seminar\nWeek 11: Dig
+ ital transformation\nTutor: Ing. Tereza Malá\nRoom: SB 324\, Stará budo
+ va
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IS Seminar: Digital transformation
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:om-L12@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261207T110000
+DTEND;TZID=Europe/Prague:20261207T123000
+SUMMARY:OM Lecture: Sustainable operations
+LOCATION:NB 350 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 350 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Operations Management (3SG305) · Lecture\nWeek 12: Sustainabl
+ e operations\nLecturer: doc. Ing. Jana Nováková\, Ph.D.\nRoom: NB 350\,
+  Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OM Lecture: Sustainable operations
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:micro-L12@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261207T143000
+DTEND;TZID=Europe/Prague:20261207T160000
+SUMMARY:MICRO Lecture: Public goods and information
+LOCATION:NB 169 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 169 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Microeconomics I (5EN101) · Lecture\nWeek 12: Public goods an
+ d information\nLecturer: prof. Ing. Tomáš Beneš\, CSc.\nRoom: NB 169\,
+  Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MICRO Lecture: Public goods and information
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stats-L12@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261208T091500
+DTEND;TZID=Europe/Prague:20261208T104500
+SUMMARY:STAT Lecture: Linear regression
+LOCATION:RB 101 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 101 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Statistics II (4ST201) · Lecture\nWeek 12: Linear regression\
+ nLecturer: Ing. Martin Dvořák\, Ph.D.\nRoom: RB 101\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:STAT Lecture: Linear regression
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mkt-L12@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261208T124500
+DTEND;TZID=Europe/Prague:20261208T141500
+SUMMARY:MKT Lecture: The marketing plan
+LOCATION:NB 350 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 350 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Marketing (3MG216) · Lecture\nWeek 12: The marketing plan\nLe
+ cturer: Ing. Klára Veselá\, Ph.D.\nRoom: NB 350\, Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MKT Lecture: The marketing plan
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mkt-S12@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261209T091500
+DTEND;TZID=Europe/Prague:20261209T104500
+SUMMARY:MKT Seminar: The marketing plan
+LOCATION:SB 202 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 202 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Marketing (3MG216) · Seminar\nWeek 12: The marketing plan\nTu
+ tor: Ing. Jakub Pokorný\nRoom: SB 202\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MKT Seminar: The marketing plan
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:om-S12@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261209T124500
+DTEND;TZID=Europe/Prague:20261209T141500
+SUMMARY:OM Seminar: Sustainable operations
+LOCATION:RB 209 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 209 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Operations Management (3SG305) · Seminar\nWeek 12: Sustainabl
+ e operations\nTutor: Ing. Petr Král\nRoom: RB 209\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OM Seminar: Sustainable operations
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:is-L12@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261209T161500
+DTEND;TZID=Europe/Prague:20261209T174500
+SUMMARY:IS Lecture: AI in business
+LOCATION:RB 101 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 101 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Business Information Systems (4IT115) · Lecture\nWeek 12: AI 
+ in business\nLecturer: Ing. Ondřej Svoboda\, Ph.D.\nRoom: RB 101\, Rajsk
+ á budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IS Lecture: AI in business
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stats-S12@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261210T110000
+DTEND;TZID=Europe/Prague:20261210T123000
+SUMMARY:STAT Seminar: Linear regression
+LOCATION:SB 107 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 107 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Statistics II (4ST201) · Seminar\nWeek 12: Linear regression\
+ nTutor: Mgr. Eva Horáková\nRoom: SB 107\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:STAT Seminar: Linear regression
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:micro-S12@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261210T143000
+DTEND;TZID=Europe/Prague:20261210T160000
+SUMMARY:MICRO Seminar: Public goods and information
+LOCATION:RB 338 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 338 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Microeconomics I (5EN101) · Seminar\nWeek 12: Public goods an
+ d information\nTutor: Ing. Lucie Marková\nRoom: RB 338\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MICRO Seminar: Public goods and information
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:is-S12@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261211T091500
+DTEND;TZID=Europe/Prague:20261211T104500
+SUMMARY:IS Seminar: AI in business
+LOCATION:SB 324 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 324 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Business Information Systems (4IT115) · Seminar\nWeek 12: AI 
+ in business\nTutor: Ing. Tereza Malá\nRoom: SB 324\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IS Seminar: AI in business
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:om-L13@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261214T110000
+DTEND;TZID=Europe/Prague:20261214T123000
+SUMMARY:OM Lecture: Project presentations and review
+LOCATION:NB 350 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 350 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Operations Management (3SG305) · Lecture\nWeek 13: Project pr
+ esentations and review\nNote: Project presentations\, 10 minutes per team
+ \nLecturer: doc. Ing. Jana Nováková\, Ph.D.\nRoom: NB 350\, Nová budov
+ a
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OM Lecture: Project presentations and review
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:micro-L13@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261214T143000
+DTEND;TZID=Europe/Prague:20261214T160000
+SUMMARY:MICRO Lecture: Revision
+LOCATION:NB 169 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 169 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Microeconomics I (5EN101) · Lecture\nWeek 13: Revision\nLectu
+ rer: prof. Ing. Tomáš Beneš\, CSc.\nRoom: NB 169\, Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MICRO Lecture: Revision
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stats-L13@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261215T091500
+DTEND;TZID=Europe/Prague:20261215T104500
+SUMMARY:STAT Lecture: Revision
+LOCATION:RB 101 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 101 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Statistics II (4ST201) · Lecture\nWeek 13: Revision\nLecturer
+ : Ing. Martin Dvořák\, Ph.D.\nRoom: RB 101\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:STAT Lecture: Revision
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mkt-L13@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261215T124500
+DTEND;TZID=Europe/Prague:20261215T141500
+SUMMARY:MKT Lecture: Case presentations
+LOCATION:NB 350 – Nová budova\, VŠE\, nám. W. Churchilla 1938/4\, 130
+  67 Praha 3
+GEO:50.0841;14.441
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="NB 350 Nová budova":geo:50
+ .0841,14.441
+DESCRIPTION:Marketing (3MG216) · Lecture\nWeek 13: Case presentations\nNo
+ te: Team presentations of the marketing plan\nLecturer: Ing. Klára Vesel
+ á\, Ph.D.\nRoom: NB 350\, Nová budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MKT Lecture: Case presentations
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mkt-S13@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261216T091500
+DTEND;TZID=Europe/Prague:20261216T104500
+SUMMARY:MKT Seminar: Case presentations
+LOCATION:SB 202 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 202 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Marketing (3MG216) · Seminar\nWeek 13: Case presentations\nNo
+ te: Team presentations of the marketing plan\nTutor: Ing. Jakub Pokorný\
+ nRoom: SB 202\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MKT Seminar: Case presentations
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:om-S13@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261216T124500
+DTEND;TZID=Europe/Prague:20261216T141500
+SUMMARY:OM Seminar: Project presentations and review
+LOCATION:RB 209 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 209 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Operations Management (3SG305) · Seminar\nWeek 13: Project pr
+ esentations and review\nNote: Project presentations\, 10 minutes per team
+ \nTutor: Ing. Petr Král\nRoom: RB 209\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OM Seminar: Project presentations and review
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:is-L13@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261216T161500
+DTEND;TZID=Europe/Prague:20261216T174500
+SUMMARY:IS Lecture: Revision
+LOCATION:RB 101 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 101 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Business Information Systems (4IT115) · Lecture\nWeek 13: Rev
+ ision\nLecturer: Ing. Ondřej Svoboda\, Ph.D.\nRoom: RB 101\, Rajská bud
+ ova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IS Lecture: Revision
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stats-S13@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261217T110000
+DTEND;TZID=Europe/Prague:20261217T123000
+SUMMARY:STAT Seminar: Revision
+LOCATION:SB 107 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 107 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Statistics II (4ST201) · Seminar\nWeek 13: Revision\nTutor: M
+ gr. Eva Horáková\nRoom: SB 107\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:STAT Seminar: Revision
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:micro-S13@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261217T143000
+DTEND;TZID=Europe/Prague:20261217T160000
+SUMMARY:MICRO Seminar: Revision
+LOCATION:RB 338 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 338 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Microeconomics I (5EN101) · Seminar\nWeek 13: Revision\nTutor
+ : Ing. Lucie Marková\nRoom: RB 338\, Rajská budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MICRO Seminar: Revision
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:is-S13@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261218T091500
+DTEND;TZID=Europe/Prague:20261218T104500
+SUMMARY:IS Seminar: Revision
+LOCATION:SB 324 – Stará budova\, VŠE\, nám. W. Churchilla 1938/4\, 13
+ 0 67 Praha 3
+GEO:50.0846;14.4404
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="SB 324 Stará budova":geo:5
+ 0.0846,14.4404
+DESCRIPTION:Business Information Systems (4IT115) · Seminar\nWeek 13: Rev
+ ision\nTutor: Ing. Tereza Malá\nRoom: SB 324\, Stará budova
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IS Seminar: Revision
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:task-micro-ps4@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261023T232900
+DTEND;TZID=Europe/Prague:20261023T235900
+SUMMARY:Due: Problem set 4: Production and costs (MICRO)
+DESCRIPTION:Microeconomics I · Assignment\nEffort: Short (about 1–2 hou
+ rs)\nSix short exercises on cost curves. Upload one PDF in the course pag
+ e.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Due: Problem set 4: Production and costs (MICRO)
+TRIGGER:-PT1440M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:task-stats-hw3@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261024T232900
+DTEND;TZID=Europe/Prague:20261024T235900
+SUMMARY:Due: Homework 3: Normal distribution (STAT)
+DESCRIPTION:Statistics II · Homework\nEffort: Medium (a few sessions)\nEx
+ ercises 5.1–5.12 from the workbook. Show your working\; scans are fine.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Due: Homework 3: Normal distribution (STAT)
+TRIGGER:-PT1440M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:task-om-quiz@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261027T113000
+DTEND;TZID=Europe/Prague:20261027T120000
+SUMMARY:Due: Online quiz: Lean production and JIT (OM)
+DESCRIPTION:Operations Management · Quiz\nEffort: Short (about 1–2 hour
+ s)\n10 questions\, 20 minutes\, one attempt. Opens on the course page.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Due: Online quiz: Lean production and JIT (OM)
+TRIGGER:-PT1440M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:task-mkt-seg@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261028T232900
+DTEND;TZID=Europe/Prague:20261028T235900
+SUMMARY:Due: Case study draft: Segmentation of Kofola (MKT)
+DESCRIPTION:Marketing · Assignment\nEffort: Medium (a few sessions)\nTwo-
+ page draft in your team of three. Feedback in the next seminar.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Due: Case study draft: Segmentation of Kofola (MKT)
+TRIGGER:-PT1440M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:task-is-bpmn@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261031T232900
+DTEND;TZID=Europe/Prague:20261031T235900
+SUMMARY:Due: BPMN model: Order-to-cash process (IS)
+DESCRIPTION:Business Information Systems · Assignment\nEffort: Medium (a 
+ few sessions)\nModel the process in Camunda Modeler. Upload the .bpmn fil
+ e and a PNG export.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Due: BPMN model: Order-to-cash process (IS)
+TRIGGER:-PT1440M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:task-stats-mid@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261105T103000
+DTEND;TZID=Europe/Prague:20261105T110000
+SUMMARY:Due: Midterm test (weeks 1–6) (STAT)
+DESCRIPTION:Statistics II · Test\nEffort: Long (spread over weeks)\n45 mi
+ nutes in your seminar\, room SB 107. Calculator and ISIC card required. S
+ tart revising early.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Due: Midterm test (weeks 1–6) (STAT)
+TRIGGER:-PT1440M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:task-om-project@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261116T232900
+DTEND;TZID=Europe/Prague:20261116T235900
+SUMMARY:Due: Semester project: Process analysis of a Prague company (OM)
+DESCRIPTION:Operations Management · Project\nEffort: Long (spread over we
+ eks)\nTeam report of 15–20 pages on one real process: flowchart\, capac
+ ity\, bottleneck and an improvement proposal. Upload as PDF\; you present
+  it in week 13.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Due: Semester project: Process analysis of a Prague company (O
+ M)
+TRIGGER:-PT1440M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:task-mkt-pres@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20261209T084500
+DTEND;TZID=Europe/Prague:20261209T091500
+SUMMARY:Due: Team presentation: Marketing plan (MKT)
+DESCRIPTION:Marketing · Presentation\nEffort: Long (spread over weeks)\n1
+ 5-minute presentation of your marketing plan in the week 13 seminar. Uplo
+ ad the slides the day before.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Due: Team presentation: Marketing plan (MKT)
+TRIGGER:-PT1440M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:exam-stats-1@study-hub.vse.example
+DTSTAMP:20261022T124556Z
+DTSTART;TZID=Europe/Prague:20270108T110000
+DTEND;TZID=Europe/Prague:20270108T123000
+SUMMARY:Exam: Statistics II
+LOCATION:RB 101 – Rajská budova\, VŠE\, nám. W. Churchilla 1938/4\, 1
+ 30 67 Praha 3
+GEO:50.0836;14.4425
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="nám. W. Churchilla 1938/
+ 4, 130 67 Praha 3";X-APPLE-RADIUS=60;X-TITLE="RB 101 Rajská budova":geo:
+ 50.0836,14.4425
+DESCRIPTION:Statistics II (4ST201) · Written exam\nBring your ISIC card.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Exam: Statistics II
+TRIGGER:-PT1440M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
