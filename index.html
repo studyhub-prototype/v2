@@ -804,7 +804,7 @@ td.num,th.num{text-align:right;font-family:var(--f-mono);font-variant-numeric:ta
 .mail-where{margin:0 2px}
 .mail-tools{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px}
 .mail-tools .actions{gap:6px}
-.btn[aria-pressed="true"]{background:var(--amber-soft);border-color:var(--amber);color:var(--amber)}
+.mail-tools .btn[aria-pressed="true"]{background:var(--amber-soft);border-color:var(--amber);color:var(--amber)}
 .move select{height:32px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:0 8px;font:inherit;font-size:.875rem}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .mrow .when{display:inline-flex;align-items:center;gap:5px}
@@ -838,6 +838,89 @@ td.num,th.num{text-align:right;font-family:var(--f-mono);font-variant-numeric:ta
   .page-head .actions{width:100%}
   .page-head .actions .btn{flex:1;justify-content:center}
 }
+
+/* ===== v2.2: calendar Day / Week / Month ===== */
+.cal-head .cal-bar{gap:12px}
+.cal-modes button{min-width:64px}
+.cal-nav .btn.is-now{background:var(--surface-2);font-weight:600}
+.day-strip{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;max-width:900px}
+.day-strip button{border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:7px 0 6px;display:flex;flex-direction:column;align-items:center;gap:1px;cursor:pointer;font:inherit;font-size:.8125rem;color:var(--ink-2);min-height:60px}
+.day-strip button.wkend{background:var(--surface-2)}
+.day-strip b{font:600 1.1rem/1.2 var(--f-display);color:var(--ink)}
+.day-strip .is-today b{color:var(--blue)}
+.day-strip button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:var(--on-blue)}
+.day-strip button[aria-pressed="true"] b{color:var(--on-blue)}
+.dots{display:flex;gap:3px;height:6px;margin-top:2px}
+.dots i,.mdots i{width:6px;height:6px;border-radius:50%;display:block}
+.dots i.c,.mdots i.c{background:var(--blue-2)}
+.day-strip button[aria-pressed="true"] .dots i.c{background:var(--on-blue)}
+.day-view{display:flex;flex-direction:column;gap:18px;max-width:900px}
+.day-list{display:flex;flex-direction:column;gap:8px}
+.week-list{display:none}
+.wl-day{display:flex;flex-direction:column;gap:6px}
+.wl-head{display:flex;align-items:center;gap:8px;border:0;background:none;padding:4px 2px;cursor:pointer;color:var(--ink);font:inherit;text-align:left;min-height:44px}
+.wl-head b{font:700 1rem var(--f-display)}
+.wl-head span{color:var(--ink-2);font-size:.875rem}
+.wl-head .i{margin-left:auto;color:var(--ink-3)}
+.wl-day.is-today .wl-head b{color:var(--blue)}
+.wl-due{display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:8px 10px 8px 0;cursor:pointer;color:var(--ink);font:inherit;text-align:left;min-height:48px}
+.wl-due .bar{width:4px;align-self:stretch;background:var(--uc);border-radius:0 4px 4px 0;flex:none}
+.wl-due .t{flex:1;min-width:0;font-weight:600;font-size:.9375rem}
+.wl-due .pill{flex:none;white-space:nowrap}
+.wl-empty{font-size:.875rem;color:var(--ink-2);padding:0 4px 4px}
+.wk-extra{max-width:900px}
+.month{padding:0;overflow:hidden}
+.mgrid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}
+.mhd{padding:8px 4px;font-size:.8125rem;font-weight:600;color:var(--ink-2);border-bottom:1px solid var(--line);text-align:center}
+.mcell{min-height:112px;border:0;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface);padding:6px;display:flex;flex-direction:column;gap:4px;align-items:stretch;text-align:left;cursor:pointer;color:var(--ink);font:inherit;min-width:0}
+.mgrid>:nth-child(7n){border-right:0}
+.mcell:hover{background:var(--surface-2)}
+.mcell.wkend{background:color-mix(in srgb,var(--surface-2) 55%,var(--surface))}
+.mcell.out{opacity:.5}
+.mnum{font:600 .9375rem/26px var(--f-display);min-width:26px;height:26px;text-align:center;align-self:flex-start;border-radius:99px}
+.mcell.hol .mnum{color:var(--red)}
+.mcell.is-today .mnum{background:var(--blue);color:var(--on-blue)}
+.mbody{display:flex;flex-direction:column;gap:3px;min-width:0}
+.mcls,.mmore,.mhol{font-size:.8125rem;color:var(--ink-2)}
+.mchip{font-size:.8125rem;font-weight:600;padding:2px 6px 2px 8px;border-radius:5px;background:color-mix(in srgb,var(--uc) 16%,var(--surface));box-shadow:inset 3px 0 0 var(--uc);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mdots{display:none}
+@media (max-width:767px){
+  .cal-head .cal-bar{width:100%}
+  .cal-modes{flex:1 1 100%;display:grid;grid-template-columns:repeat(3,1fr)}
+  .cal-modes button{min-height:44px}
+  .cal-nav{flex:1}
+  .cal-nav .btn{flex:1;justify-content:center}
+  .week-list{display:flex;flex-direction:column;gap:12px}
+  .wk-extra{display:none}
+  .cal-legend .course-leg,.cal-legend .sep{display:none}
+  .day-strip{gap:4px}
+  .day-strip button{min-height:62px;font-size:.75rem;padding-inline:0}
+  .mcell{min-height:60px;padding:4px 2px;align-items:center;gap:2px}
+  .mnum{align-self:center;font-size:.875rem}
+  .mbody{display:none}
+  .mdots{display:flex;gap:3px;justify-content:center;min-height:6px}
+  .mhd{font-size:.75rem;padding:6px 0}
+}
+
+/* ===== v2.2: effort wheel picker ===== */
+.effort-pick{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:6px 12px;border-radius:10px;border:1px solid var(--line);background:var(--surface-2);cursor:pointer;color:var(--ink);font:inherit}
+.effort-pick:hover{border-color:var(--blue-2)}
+.effort-pick .i{width:16px;height:16px;color:var(--ink-2)}
+.effort-pick b{font-size:1rem}
+.effort-pick .ep-edit{font-size:.8125rem;color:var(--blue-2);font-weight:600}
+.picker-head{align-items:center}
+.picker-head h2{flex:1;text-align:center}
+.icon-btn.round{border-radius:50%;width:44px;height:44px}
+.icon-btn.ok{background:var(--blue);border-color:var(--blue);color:var(--on-blue)}
+.icon-btn.ok[disabled]{opacity:.4}
+.wheels{position:relative;display:flex;justify-content:center;align-items:center;gap:6px;height:220px;margin:4px 0;user-select:none;-webkit-user-select:none}
+.wband{position:absolute;left:0;right:0;top:88px;height:44px;border-radius:12px;background:var(--surface-2);pointer-events:none}
+.wheel{position:relative;height:220px;width:84px;overflow-y:scroll;scroll-snap-type:y mandatory;padding:88px 0;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;
+  -webkit-mask-image:linear-gradient(transparent,#000 30%,#000 70%,transparent);mask-image:linear-gradient(transparent,#000 30%,#000 70%,transparent);outline-offset:-2px}
+.wheel::-webkit-scrollbar{display:none}
+.wi{height:44px;display:grid;place-items:center;scroll-snap-align:center;font:500 1.5rem/1 var(--f-display);font-variant-numeric:tabular-nums;color:var(--ink-2);cursor:pointer}
+.wi.sel{color:var(--ink);font-weight:600;font-size:1.75rem}
+.wunit{font-size:1rem;color:var(--ink-2);width:34px;z-index:1}
 
 /* ===== Responsive: tablet 768–1023px and phone <768px. Nothing below applies at 1024px and wider. ===== */
 .search-btn,.search-close,.zoom-ctl{display:none}
@@ -1261,7 +1344,7 @@ const saveTasks=()=>store.set('taskState',TSTATE);
 const stepOf=id=>tst(id).step||0;
 const hoursOf=t=>tst(t.id).hours!=null?tst(t.id).hours:(HOURS[t.id]||2);
 const effortOf=t=>{const h=hoursOf(t);return h<=2?'short':h<=8?'medium':'long'};   // Long / Medium / Short always follow the hours
-const fmtH=h=>(Number.isInteger(h)?h:h.toFixed(1))+' h';
+const fmtH=h=>{const H=Math.floor(h+1e-9),M=Math.round((h-H)*60);return H&&M?`${H} h ${M} min`:H?`${H} h`:`${M} min`};
 function setStep(id,n){tst(id).step=Math.max(0,Math.min(4,n));saveTasks()}
 // done = submitted (step 4); kept as a Set-like object so all v1 code keeps working
 state.done={has:id=>stepOf(id)===4,add:id=>setStep(id,4),delete:id=>setStep(id,2),[Symbol.iterator]:function*(){for(const t of TASKS)if(stepOf(t.id)===4)yield t.id}};
@@ -1473,7 +1556,7 @@ function today(){
   const dueCard=`<section class="card o3"><div class="card-head"><h2>Due soon</h2><button class="link" data-go="tasks">All tasks</button></div><div class="task-mini">${due.map(taskRow).join('')||'<div class="empty">Nothing due. Nice work.</div>'}</div></section>`;
   const tl=todays.length?`<div class="tl2">${todays.map(s=>`<button class="tl2-row ${s.end<now?'past':''} ${s.cancelled?'off':''}" data-session="${s.id}"><b class="mono">${fmtTime(s.start)}</b><span>${e(s.course.name)} · <span class="muted">${s.cancelled?e(s.holiday):e(s.room)}</span></span></button>`).join('')}</div>`
     :`<div class="empty">No classes today${HOLIDAYS[iso(now)]?' · '+e(HOLIDAYS[iso(now)]):''}.${next?' Next: '+e(next.course.short)+' '+e(fmtDay(next.date)):''}</div>`;
-  const todayCard=`<section class="card o4"><div class="card-head"><h2>Today</h2><button class="link" data-go="calendar">Week view</button></div>${tl}</section>`;
+  const todayCard=`<section class="card o4"><div class="card-head"><h2>Today</h2><button class="link" data-calview="week">Week view</button></div>${tl}</section>`;
   const mz=openState(CANTEENS[0].hours);const lib=SP.lib;const lo=liveOcc(lib);const ls=openState(lib.hours);
   const mini=`<div class="mini-tiles o5"><button class="card mini" data-go="cafeteria"><b>Menza Italská</b><span>${mz.open?'Open until '+mz.until:'Closed · opens '+e(mz.next)}</span></button>
      <button class="card mini" data-go="library"><b>Library</b><span>${lo!=null?lo+' % full':'Closed · opens '+e(ls.next)}</span>${lo!=null?`<span class="occ-bar"><i style="width:${lo}%"></i></span>`:''}</button></div>`;
@@ -1487,19 +1570,50 @@ function today(){
 const DAY0=8*60,DAY1=18*60,SPAN=DAY1-DAY0;
 const minOf=d=>d.getHours()*60+d.getMinutes();
 const pct=m=>((Math.min(DAY1,Math.max(DAY0,m))-DAY0)/SPAN*100);
+/* v2.2: Day / Week / Month. One anchor date (state.calDay) drives all three views. */
+const calMode=()=>state.calMode||(isPhone()?'day':'week');
+function calAnchor(){
+  if(state.calDay)return parseIso(state.calDay);
+  const now=sod(new Date());
+  // Mon–Fri week grid: on Saturday and Sunday "this week" is the coming school week
+  return calMode()==='week'&&!isPhone()&&dow(now)>=6?addDays(mondayOf(now),7):now;
+}
+function shiftCal(n){
+  const a=calAnchor();const m=calMode();
+  const d=m==='day'?addDays(a,n):m==='week'?addDays(a,7*n):new Date(a.getFullYear(),a.getMonth()+n,1);
+  state.calDay=iso(d);render();
+}
+const dueOnDay=d=>TASKS.filter(t=>!state.done.has(t.id)&&sameDay(t.due,d)).sort((a,b)=>a.due-b.due);
+const examsOnDay=d=>EXAMS.filter(x=>state.exams.has(x.id)&&sameDay(x.date,d));
+const worstUrg=ts=>ts.length?['red','amber','green'].find(u=>ts.some(t=>urgency(t)===u)):null;
+function dayItems(d){   // classes, exams and study bookings of one day, sorted by time
+  const it=[];
+  sessionsOn(d).forEach(s=>it.push({t:s.start,html:`<button class="ag-item ${s.cancelled?'off':''}" style="--cc:${s.course.color}" data-session="${s.id}"><div class="tm2">${fmtTime(s.start)}<br>${fmtTime(s.end)}</div><div style="min-width:0"><div class="t">${e(s.course.name)} · ${e(s.type)}</div><div class="r"><span class="mono">${e(s.room)}</span> · ${e(building(s.room).name)}</div><div class="p">${s.cancelled?'No class · '+e(s.holiday):'Week '+s.week+': '+e(s.topic)}</div></div></button>`}));
+  examsOnDay(d).forEach(x=>it.push({t:x.date,html:`<button class="ag-item" style="--cc:var(--red)" data-exam-info="${x.id}"><div class="tm2">${fmtTime(x.date)}</div><div style="min-width:0"><div class="t">Exam · ${e(C[x.course].name)}</div><div class="r"><span class="mono">${e(x.room)}</span> · ${e(building(x.room).name)}</div></div></button>`}));
+  bookings.filter(b=>b.date===iso(d)).forEach(b=>{const tm=bookingTimes(b);it.push({t:tm.start,html:`<button class="ag-item" style="--cc:var(--green)" data-go="library"><div class="tm2">${fmtTime(tm.start)}<br>${fmtTime(tm.end)}</div><div style="min-width:0"><div class="t">Study · ${e(SP[b.space].name)}</div><div class="r">${e(bookingLabel(b))}</div></div></button>`})});
+  return it.sort((a,b)=>a.t-b.t).map(x=>x.html);
+}
 function calendar(){
-  const now=new Date();
-  // Mon–Fri week view: on Saturday and Sunday "this week" is the coming school week.
-  const base=dow(now)>=6?addDays(mondayOf(now),7):mondayOf(now);
-  const mon=addDays(base,state.calOffset*7);
-  const days=[0,1,2,3,4].map(i=>addDays(mon,i));
-  const wk=weekOf(mon);
-  if(state.calDay==null||!days.some(d=>iso(d)===state.calDay)){const t=days.find(d=>sameDay(d,now));state.calDay=iso(t||days[0])}
-  const hours=[];for(let m=DAY0;m<DAY1;m+=60)hours.push(m);
-  const dueOn=d=>TASKS.filter(t=>!state.done.has(t.id)&&sameDay(t.due,d)).sort((a,b)=>a.due-b.due);
-  const examsOn=d=>EXAMS.filter(x=>state.exams.has(x.id)&&sameDay(x.date,d));
+  const now=new Date();const mode=calMode();const a=calAnchor();
   const conn=Object.keys(settings.cal).filter(k=>settings.cal[k]).map(k=>PROVIDERS[k].name);
   const synced=settings.sync==='auto'&&conn.length;
+  const traffic=`<span class="legend traffic" aria-label="Deadline colours">${['red','amber','green'].map(u=>`<span><i class="tl-sw" style="--uc:var(--${u});--uc-soft:var(--${u}-soft)"></i>${URG[u].label}</span>`).join('')}</span>`;
+  const wkNo=weekOf(mondayOf(a));
+  let title,eyebrow=wkNo>=1&&wkNo<=WEEKS?`Teaching week ${wkNo} of ${WEEKS}`:'Outside teaching weeks',body='',navLabel={day:'day',week:'week',month:'month'}[mode];
+  if(mode==='day'){
+    const mon=mondayOf(a);const strip=[0,1,2,3,4,5,6].map(i=>addDays(mon,i));
+    title=sameDay(a,now)?'Today · '+fmtLong(a):fmtLong(a);
+    const items=dayItems(a);const due=dueOnDay(a);
+    body=`<div class="day-strip" role="group" aria-label="Days of this week">${strip.map(d=>{const du=dueOnDay(d),u=worstUrg(du);return`<button aria-pressed="${sameDay(d,a)}" data-calday="${iso(d)}" class="${sameDay(d,now)?'is-today':''} ${dow(d)>=6?'wkend':''}">${e(d.toLocaleDateString('en-GB',{weekday:'short'}))}<b>${d.getDate()}</b><span class="dots">${sessionsOn(d).some(s=>!s.cancelled)?'<i class="c"></i>':''}${u?`<i style="background:var(--${u})"></i>`:''}</span></button>`}).join('')}</div>
+     <div class="cal-swipe day-view">
+      ${HOLIDAYS[iso(a)]?`<div class="notice">${icon('info')}<span>${e(HOLIDAYS[iso(a)])}: public holiday, no classes.</span></div>`:''}
+      ${due.length?`<section class="card"><div class="card-head"><h2>Due ${sameDay(a,now)?'today':'this day'}</h2></div><div class="task-mini">${due.map(taskRow).join('')}</div></section>`:''}
+      <section class="card"><div class="card-head"><h2>Schedule</h2><span class="small muted">${items.length} item${items.length===1?'':'s'}</span></div>${items.length?`<div class="day-list">${items.join('')}</div>`:`<div class="empty">${dow(a)>=6?'Weekend · no classes.':'No classes on this day.'}</div>`}</section></div>`;
+  }else if(mode==='week'){
+    const mon=mondayOf(a);const days=[0,1,2,3,4].map(i=>addDays(mon,i));const all7=[0,1,2,3,4,5,6].map(i=>addDays(mon,i));
+    title=`${days[0].getDate()}.–${fmtDate(days[4])}`;
+    const hours=[];for(let m=DAY0;m<DAY1;m+=60)hours.push(m);
+    const dueOn=dueOnDay,examsOn=examsOnDay;
   let grid=`<div class="cal-h cal-corner"></div>${days.map(d=>`<div class="cal-h ${sameDay(d,now)?'today':''}">${e(d.toLocaleDateString('en-GB',{weekday:'short'}))} <b>${d.getDate()}</b><span class="cal-m">${e(d.toLocaleDateString('en-GB',{month:'short'}))}</span></div>`).join('')}`;
   grid+=`<div class="cal-allday gut">Due</div>${days.map(d=>{
     const late=bookings.filter(b=>b.date===iso(d)&&bookingTimes(b).start.getHours()*60>=DAY1);
@@ -1512,26 +1626,41 @@ function calendar(){
     const bk=bookings.filter(b=>b.date===iso(d)).map(b=>{const t=bookingTimes(b);const m0=minOf(t.start),m1=minOf(t.start)+b.dur*60;if(m0>=DAY1)return'';return`<button class="ev" style="--cc:var(--green);${box(m0,m1)}" data-go="library"><span class="t">Study · ${e(SP[b.space].name)}</span><span class="r">${fmtTime(t.start)} · ${e(bookingLabel(b))}</span></button>`}).join('');
     const nl=sameDay(d,now)&&minOf(now)>DAY0&&minOf(now)<DAY1?`<div class="now-line" style="top:${pct(minOf(now))}%"></div>`:'';
     return`<div class="cal-col ${sameDay(d,now)?'today':''}">${hours.slice(1).map(m=>`<div class="line" style="top:${pct(m)}%"></div>`).join('')}${evs}${ex}${bk}${nl}</div>`}).join('');
-  const sel=days.find(d=>iso(d)===state.calDay);
-  const agItems=sessionsOn(sel);
-  const agDue=dueOn(sel);
-  const agenda=`<div class="days">${days.map(d=>`<button aria-pressed="${iso(d)===state.calDay}" data-calday="${iso(d)}" class="${sessionsOn(d).length||dueOn(d).length?'has':''}">${e(d.toLocaleDateString('en-GB',{weekday:'short'}))}<b>${d.getDate()}</b></button>`).join('')}</div>
-    ${HOLIDAYS[iso(sel)]?`<div class="notice">${icon('info')}<span>${e(HOLIDAYS[iso(sel)])}: public holiday, no classes.</span></div>`:''}
-    ${agDue.map(taskRow).join('')}
-    ${agItems.length?agItems.map(s=>`<button class="ag-item ${s.cancelled?'off':''}" style="--cc:${s.course.color}" data-session="${s.id}"><div class="tm2">${fmtTime(s.start)}<br>${fmtTime(s.end)}</div><div style="min-width:0"><div class="t">${e(s.course.name)} · ${e(s.type)}</div><div class="r"><span class="mono">${e(s.room)}</span> · ${e(building(s.room).name)}</div><div class="p">${s.cancelled?'No class':'Week '+s.week+': '+e(s.topic)}</div></div></button>`).join(''):`<div class="empty">No classes on this day.</div>`}`;
-  const traffic=`<span class="legend traffic" aria-label="Deadline colours">${['red','amber','green'].map(u=>`<span><i class="tl-sw" style="--uc:var(--${u});--uc-soft:var(--${u}-soft)"></i>${URG[u].label}</span>`).join('')}</span>`;
-  return `<header class="page-head cal-head"><div><p class="eyebrow">${wk>=1&&wk<=WEEKS?`Teaching week ${wk} of ${WEEKS}`:'Outside teaching weeks'}${state.calOffset===0?' · this week':''}</p><h1>${e(days[0].getDate()+'.')}–${e(fmtDate(days[4]))}</h1></div>
-    <div class="cal-bar"><div class="cal-nav"><button class="icon-btn" data-calnav="-1" aria-label="Previous week">${icon('left')}</button><button class="btn" data-calnav="0" ${state.calOffset===0?'aria-pressed="true"':''}>This week</button><button class="icon-btn" data-calnav="1" aria-label="Next week">${icon('right')}</button></div>
+    const wkend=all7.slice(5).filter(d=>dueOnDay(d).length);
+    // phone: the same week as a list of days (the grid does not fit a phone screen)
+    const list=all7.filter(d=>dow(d)<=5||dueOnDay(d).length||dayItems(d).length).map(d=>{const it=dayItems(d),du=dueOnDay(d);
+      return`<div class="wl-day ${sameDay(d,now)?'is-today':''}"><button class="wl-head" data-calpick="${iso(d)}"><b>${e(d.toLocaleDateString('en-GB',{weekday:'long'}))}</b><span>${d.getDate()} ${e(d.toLocaleDateString('en-GB',{month:'short'}))}${sameDay(d,now)?' · today':''}</span>${icon('right')}</button>
+        ${HOLIDAYS[iso(d)]?`<div class="hol-chip">${e(HOLIDAYS[iso(d)])}</div>`:''}
+        ${du.map(t=>{const u=urgency(t);return`<button class="wl-due" style="--uc:var(--${u})" data-task="${t.id}"><span class="bar"></span><span class="t">Due ${fmtTime(t.due)} · ${e(t.title)}</span><span class="pill ${u}">${URG[u].label}</span></button>`}).join('')}
+        ${it.length?it.join(''):(du.length?'':'<div class="wl-empty">No classes</div>')}</div>`}).join('');
+    body=`<section class="card cal-card cal-wrap"><div class="cal" id="cal">${grid}</div></section>
+     ${wkend.length?`<div class="notice wk-extra">${icon('info')}<span>Weekend deadline${wkend.length>1?'s':''}: ${wkend.map(d=>dueOnDay(d).map(t=>`<button class="link" data-task="${t.id}">${e(t.title)} (${e(fmtDay(t.due))})</button>`).join(', ')).join(', ')}</span></div>`:''}
+     <div class="cal-swipe week-list">${list}</div>`;
+  }else{
+    const first=new Date(a.getFullYear(),a.getMonth(),1);const start=mondayOf(first);const last=new Date(a.getFullYear(),a.getMonth()+1,0);
+    const end=addDays(mondayOf(last),6);const cells=[];for(let d=start;d<=end;d=addDays(d,1))cells.push(d);
+    title=first.toLocaleDateString('en-GB',{month:'long',year:'numeric'});eyebrow=SEMESTER_LABEL;
+    body=`<section class="card month cal-swipe"><div class="mgrid">${['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map(x=>`<div class="mhd">${x}</div>`).join('')}
+      ${cells.map(d=>{const ss=sessionsOn(d).filter(s=>!s.cancelled),du=dueOnDay(d),ex=examsOnDay(d),out=d.getMonth()!==first.getMonth(),u=worstUrg(du);
+        return`<button class="mcell ${out?'out':''} ${sameDay(d,now)?'is-today':''} ${dow(d)>=6?'wkend':''} ${HOLIDAYS[iso(d)]?'hol':''}" data-calpick="${iso(d)}" aria-label="${e(fmtLong(d))}: ${ss.length} classes, ${du.length} deadlines">
+          <span class="mnum">${d.getDate()}</span>
+          <span class="mbody">${HOLIDAYS[iso(d)]?`<span class="mhol">${e(HOLIDAYS[iso(d)])}</span>`:''}${ss.length?`<span class="mcls">${ss.length} class${ss.length===1?'':'es'}</span>`:''}${ex.map(x=>`<span class="mchip" style="--uc:var(--red)">Exam ${e(C[x.course].short)}</span>`).join('')}${du.slice(0,2).map(t=>`<span class="mchip" style="--uc:var(--${urgency(t)})">${e(C[t.course].short)}: ${e(t.title)}</span>`).join('')}${du.length>2?`<span class="mmore">+${du.length-2} more</span>`:''}</span>
+          <span class="mdots">${ss.length?'<i class="c"></i>':''}${ex.length?'<i style="background:var(--red)"></i>':''}${u?`<i style="background:var(--${u})"></i>`:''}</span></button>`}).join('')}</div></section>`;
+  }
+  const isNow=mode==='day'?sameDay(a,now):mode==='week'?sameDay(mondayOf(a),mondayOf(calAnchorDefault())):a.getMonth()===now.getMonth()&&a.getFullYear()===now.getFullYear();
+  return `<header class="page-head cal-head"><div><p class="eyebrow">${e(eyebrow)}</p><h1>${e(title)}</h1></div>
+    <div class="cal-bar"><div class="seg cal-modes" role="group" aria-label="Calendar view">${[['day','Day'],['week','Week'],['month','Month']].map(([k,l])=>`<button aria-pressed="${mode===k}" data-calmode="${k}">${l}</button>`).join('')}</div>
+    <div class="cal-nav"><button class="icon-btn" data-calnav="-1" aria-label="Previous ${navLabel}">${icon('left')}</button><button class="btn ${isNow?'is-now':''}" data-calnav="0">Today</button><button class="icon-btn" data-calnav="1" aria-label="Next ${navLabel}">${icon('right')}</button></div>
     ${synced?`<button class="btn" data-go="settings" title="Calendar sync settings">${icon('tick')}Synced with ${e(conn.join(' & '))}</button>`:`<button class="btn primary" data-ics="all">${icon('calendarplus')}Add whole semester</button>`}</div></header>
-   <section class="card cal-card cal-wrap"><div class="cal" id="cal">${grid}</div></section>
-   <div class="agenda">${agenda}</div>
-   <div class="legend cal-legend"><b>Deadlines</b>${traffic}<span class="sep"></span>${COURSES.map(c=>`<span style="--cc:${c.color}"><span class="cdot"></span>${e(c.name)}</span>`).join('')}<span style="--cc:var(--red)"><span class="cdot"></span>Exam</span><span style="--cc:var(--green)"><span class="cdot"></span>Study booking</span></div>`;
+   ${body}
+   <div class="legend cal-legend"><b>Deadlines</b>${traffic}<span class="sep"></span><span class="course-leg">${COURSES.map(c=>`<span style="--cc:${c.color}"><span class="cdot"></span>${e(c.name)}</span>`).join('')}<span style="--cc:var(--red)"><span class="cdot"></span>Exam</span><span style="--cc:var(--green)"><span class="cdot"></span>Study booking</span></span></div>`;
 }
+const calAnchorDefault=()=>{const d=state.calDay;state.calDay=null;const r=calAnchor();state.calDay=d;return r};
 // Size the week grid so Mon–Fri 08:00–18:00 fits in the window without scrolling.
 function fitCal(){
   const cal=document.getElementById('cal');if(!cal)return;
   const measure=()=>{const col=cal.querySelector('.cal-col');const top=col.getBoundingClientRect().top+window.scrollY;
-    const leg=document.querySelector('.cal-legend');const legH=leg?leg.getBoundingClientRect().height+22:0;
+    const leg=document.querySelector('.cal-legend');const ex=document.querySelector('.wk-extra');const legH=(leg?leg.getBoundingClientRect().height+22:0)+(ex&&ex.offsetParent?ex.getBoundingClientRect().height+22:0);
     return Math.max(340,Math.min(760,window.innerHeight-top-legH-16))};
   cal.classList.remove('compact');let h=measure();
   if(h<420){cal.classList.add('compact');h=measure()}
@@ -2424,7 +2553,7 @@ function taskSheet(t,fresh=true){
    <dl class="facts">
      <div><dt>Deadline</dt><dd>${e(fmtLong(t.due))}, <span class="mono">${fmtTime(t.due)}</span><br><span class="small muted" style="font-weight:500">${e(relDay(t.due))}</span></dd></div>
      <div><dt>Course</dt><dd><button class="link" data-course="${c.id}" style="font-size:inherit;font-weight:600">${e(c.name)}</button><br><span class="small muted mono" style="font-weight:500">${e(c.code)}</span></dd></div>
-     <div><dt>Est. effort</dt><dd><span class="effort"><button class="icon-btn sm" data-effort="${t.id}|-0.5" aria-label="Less effort" ${h<=0.5?'disabled':''}>−</button><b>${fmtH(h)}</b><button class="icon-btn sm" data-effort="${t.id}|0.5" aria-label="More effort">+</button></span><span class="small muted" style="display:block;font-weight:500;margin-top:4px">Suggested by your lecturer · adjust to your pace</span></dd></div>
+     <div><dt>Est. effort</dt><dd><button class="effort-pick" data-effortpick="${t.id}" aria-label="Change estimated effort, now ${fmtH(h)}">${icon('clock')}<b>${fmtH(h)}</b><span class="ep-edit">Change</span></button><span class="small muted" style="display:block;font-weight:500;margin-top:4px">Suggested by your lecturer · adjust to your pace</span></dd></div>
      <div><dt>Start</dt><dd>${st===4?'Done':startBy(t)<=sod(new Date())?'Today':'By '+e(fmtDay(startBy(t)))}<br><span class="small muted" style="font-weight:500">${EFFORT[effortOf(t)].label} task</span></dd></div></dl>
    <div><p class="eyebrow" style="margin-bottom:4px">Description</p><p>${e(t.desc)}</p></div>
    <div><p class="eyebrow" style="margin-bottom:6px">Materials (${t.files.length})</p><div class="list">${t.files.map(f=>`<button class="li file-link" data-file="${e(f[0])}|${e(f[1])}|${c.id}|${t.id}">${icon('file')}<span>${e(f[0])}</span><span class="sub">${e(f[1])}</span></button>`).join('')}</div></div>
@@ -2432,6 +2561,24 @@ function taskSheet(t,fresh=true){
   state.sheetTask=t.id;
   fresh?openSheet(html):renderSheet(html);
 }
+// iOS-style picker: two scroll wheels (hours | minutes in 15-min steps), ✕ cancels, ✓ saves
+const WH=Array.from({length:41},(_,i)=>i),WM=[0,15,30,45],WROW=44;
+function effortSheet(id){
+  const t=T[id];const h=hoursOf(t);const H=Math.min(40,Math.floor(h+1e-9));const M=WM.reduce((b,m)=>Math.abs(m-(h-H)*60)<Math.abs(b-(h-H)*60)?m:b,0);
+  const wheel=(wid,vals,cur,label)=>`<div class="wheel" id="${wid}" tabindex="0" role="spinbutton" aria-label="${label}" aria-valuenow="${cur}" data-cur="${vals.indexOf(cur)}">${vals.map((v,i)=>`<div class="wi" data-wi="${i}">${String(v).padStart(2,'0')}</div>`).join('')}</div>`;
+  openSheet(`<div class="sheet-head picker-head"><button class="icon-btn round" data-task="${id}" aria-label="Cancel">${icon('close')}</button><h2 id="sheet-title">Est. effort</h2><button class="icon-btn round ok" data-effortok="${id}" aria-label="Save effort">${icon('tick')}</button></div>
+   <p class="small muted" style="text-align:center">${e(t.title)}<br>Suggested by your lecturer: ${fmtH(HOURS[id]||2)} · adjust to your pace</p>
+   <div class="wheels"><div class="wband" aria-hidden="true"></div>${wheel('wh',WH,H,'Hours')}<span class="wunit">h</span>${wheel('wm',WM,M,'Minutes')}<span class="wunit">min</span></div>
+   <p class="small muted" style="text-align:center" id="wsum">${fmtH(H+M/60)}</p>`);
+  requestAnimationFrame(()=>document.querySelectorAll('.wheel').forEach(w=>{w.scrollTop=Number(w.dataset.cur)*WROW;markWheel(w)}));
+}
+function wheelVal(w){const vals=w.id==='wh'?WH:WM;return vals[Math.max(0,Math.min(vals.length-1,Math.round(w.scrollTop/WROW)))]}
+function markWheel(w){const i=Math.round(w.scrollTop/WROW);w.querySelectorAll('.wi').forEach((x,j)=>x.classList.toggle('sel',j===i));w.setAttribute('aria-valuenow',wheelVal(w));
+  const wh=document.getElementById('wh'),wm=document.getElementById('wm');const sum=document.getElementById('wsum');
+  if(wh&&wm&&sum){const v=wheelVal(wh)+wheelVal(wm)/60;sum.textContent=v?fmtH(v):'Choose at least 15 min';document.querySelector('[data-effortok]').disabled=!v}}
+document.addEventListener('scroll',ev=>{const w=ev.target;if(w&&w.classList&&w.classList.contains('wheel')){clearTimeout(w._t);markWheel(w);w._t=setTimeout(()=>markWheel(w),90)}},true);
+document.addEventListener('click',ev=>{const it=ev.target.closest('.wheel .wi');if(it){const w=it.parentElement;w.scrollTo({top:Number(it.dataset.wi)*WROW,behavior:'smooth'})}});
+document.addEventListener('keydown',ev=>{const w=ev.target.closest&&ev.target.closest('.wheel');if(w&&(ev.key==='ArrowDown'||ev.key==='ArrowUp')){ev.preventDefault();w.scrollTo({top:(Math.round(w.scrollTop/WROW)+(ev.key==='ArrowDown'?1:-1))*WROW,behavior:'smooth'})}});
 function fileSheet(spec){
   const [name,meta,cid,back]=spec.split('|');const c=C[cid];const kind=(meta||'').split(' ')[0];
   const lines=kind==='Video'?['Week 1 – Introduction · 84 min','Week 2 · 88 min','Week 3 · 81 min','Week 4 · 90 min']:[`${c?c.name+' · '+c.code:''}`,SEMESTER_LABEL,c?c.lecturer:''];
@@ -2492,8 +2639,11 @@ document.addEventListener('click',async ev=>{
   if(d.session){sessionSheet(S[d.session]);return}
   if(d.task){taskSheet(T[d.task]);return}
   if(d.examInfo){examSheet(EXAMS.find(x=>x.id===d.examInfo));return}
-  if(d.calnav!==undefined){state.calOffset=d.calnav==='0'?0:state.calOffset+Number(d.calnav);state.calDay=null;render();return}
-  if(d.calday){state.calDay=d.calday;render();return}
+  if(d.calnav!==undefined){if(d.calnav==='0'){state.calDay=null;render()}else shiftCal(Number(d.calnav));return}
+  if(d.calmode){state.calMode=d.calmode;render();return}
+  if(d.calpick){state.calDay=d.calpick;state.calMode='day';render();window.scrollTo({top:0});return}
+  if(d.calview){state.calMode=d.calview;state.calDay=null;go('calendar');return}
+  if(d.calday){state.calDay=d.calday;state.calMode='day';render();return}
   if(d.tfilter){state.taskFilter=d.tfilter;render();return}
   if(d.tsort){state.taskSort=d.tsort;render();return}
   if(d.mprov){const k=d.mprov;if(settings.mail.provider!==k){settings.mail.provider=k;settings.mail.connected=false;saveSettings();toast(k==='imap'?'Enter your server details to connect':`${MAIL_PROVIDERS[k].name} selected · switch on Connect to sync`)}render();return}
@@ -2526,6 +2676,8 @@ document.addEventListener('click',async ev=>{
   if(d.scrollchanged!==undefined){const c=document.getElementById('changed');if(c){const y=c.getBoundingClientRect().top+window.scrollY-(isPhone()?70:84);window.scrollTo({top:y,behavior:'smooth'});c.classList.remove('flash');void c.offsetWidth;c.classList.add('flash')}return}
   if(d.tcourse){state.taskCourse=d.tcourse;render();return}
   if(d.stepnext){const t=T[d.stepnext];const st=stepOf(t.id);setStep(t.id,st===3?4:st+1);if(st===3)toast(`Submitted to ${C[t.course].name}`);taskSheet(t,false);render();return}
+  if(d.effortpick){effortSheet(d.effortpick);return}
+  if(d.effortok){const t=T[d.effortok];const v=wheelVal($('#wh'))+wheelVal($('#wm'))/60;if(!v){toast('Choose at least 15 min');return}tst(t.id).hours=v;saveTasks();toast(`Est. effort: ${fmtH(v)}`);taskSheet(t);render();return}
   if(d.effort){const [id,dx]=d.effort.split('|');const t=T[id];tst(id).hours=Math.max(0.5,Math.min(60,hoursOf(t)+Number(dx)));saveTasks();taskSheet(t,false);render();return}
   if(d.setstep){const now=Date.now();if(lastStep.key===d.setstep&&now-lastStep.t<450){const [id,n]=d.setstep.split('|');setStep(id,Number(n));lastStep={};taskSheet(T[id],false);render()}else lastStep={key:d.setstep,t:now};return}
   if(d.exam){const id=d.exam;if(state.exams.has(id)){state.exams.delete(id);toast('Deregistered')}else{state.exams.add(id);toast('Registered. The exam is now in your calendar.')}store.set('exams',[...state.exams]);render();return}
@@ -2581,12 +2733,8 @@ $('#overlay').addEventListener('click',ev=>{if(ev.target.id==='overlay')closeShe
 document.addEventListener('keydown',ev=>{if(ev.key==='Escape'){if(!$('#overlay').hidden)closeSheet();else{closeMenu();closeSearch()}}});
 // phone: swipe left/right in the day agenda to change the day
 let swipeX=null,swipeY=null;
-document.addEventListener('touchstart',ev=>{if(state.view==='calendar'&&ev.target.closest('.agenda')){swipeX=ev.touches[0].clientX;swipeY=ev.touches[0].clientY}else swipeX=null},{passive:true});
-document.addEventListener('touchend',ev=>{if(swipeX==null)return;const dx=ev.changedTouches[0].clientX-swipeX,dy=ev.changedTouches[0].clientY-swipeY;swipeX=null;if(Math.abs(dx)<60||Math.abs(dx)<Math.abs(dy)*1.5)return;
-  const cur=parseIso(state.calDay);let d=dow(cur)+(dx<0?1:-1);
-  if(d>5){state.calOffset++;state.calDay=null;render();const f=document.querySelector('[data-calday]');if(f){state.calDay=f.dataset.calday;render()}return}
-  if(d<1){state.calOffset--;state.calDay=null;render();const all=document.querySelectorAll('[data-calday]');if(all.length){state.calDay=all[all.length-1].dataset.calday;render()}return}
-  state.calDay=iso(addDays(cur,dx<0?1:-1));render()},{passive:true});
+document.addEventListener('touchstart',ev=>{if(state.view==='calendar'&&ev.target.closest('.cal-swipe,.day-strip')){swipeX=ev.touches[0].clientX;swipeY=ev.touches[0].clientY}else swipeX=null},{passive:true});
+document.addEventListener('touchend',ev=>{if(swipeX==null)return;const dx=ev.changedTouches[0].clientX-swipeX,dy=ev.changedTouches[0].clientY-swipeY;swipeX=null;if(Math.abs(dx)<60||Math.abs(dx)<Math.abs(dy)*1.5)return;shiftCal(dx<0?1:-1)},{passive:true});
 // phone: hide the tab bar while the keyboard is open so the input stays visible
 document.addEventListener('focusin',ev=>{if(isPhone()&&ev.target.matches('input:not([type=checkbox]):not([type=radio]):not([type=file]),textarea'))document.body.classList.add('kb')});
 document.addEventListener('focusout',()=>setTimeout(()=>{const a=document.activeElement;if(!a||!a.matches||!a.matches('input,textarea'))document.body.classList.remove('kb')},120));
