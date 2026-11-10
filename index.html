@@ -781,6 +781,64 @@ td.num,th.num{text-align:right;font-family:var(--f-mono);font-variant-numeric:ta
   .mini{padding:12px 14px}
 }
 
+/* ===== v2.1: full mail view + settings ===== */
+.mail-layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:22px;align-items:start}
+.mail-main{display:flex;flex-direction:column;gap:12px;min-width:0}
+.mail-side{display:flex;flex-direction:column;gap:2px;position:sticky;top:84px}
+.mfold{display:flex;align-items:center;gap:10px;width:100%;padding:9px 12px;border:0;border-radius:10px;background:none;cursor:pointer;color:var(--ink);font:inherit;font-size:.9375rem;text-align:left}
+.mfold:hover{background:var(--surface-2)}
+.mfold[aria-current="page"]{background:var(--blue-soft);color:var(--blue);font-weight:600}
+.mfold .i{width:18px;height:18px;color:var(--ink-2)}
+.mfold[aria-current="page"] .i{color:var(--blue)}
+.mfold b{margin-left:auto;font-size:.8125rem;background:var(--surface-2);border-radius:99px;padding:1px 8px}
+.mfold[aria-current="page"] b{background:var(--surface)}
+.mfold.add{color:var(--blue-2)}
+.mf-sep{font-size:.8125rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);padding:14px 12px 4px}
+.newfolder{display:flex;gap:6px;padding:4px 6px}
+.newfolder input{flex:1;min-width:0;height:34px;border-radius:9px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:0 9px;font:inherit}
+.mail-toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.mail-search{position:relative;flex:1 1 240px;max-width:420px}
+.mail-search .i{position:absolute;left:11px;top:10px;color:var(--ink-2);width:18px;height:18px}
+.mail-search input{width:100%;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:0 12px 0 36px;font:inherit}
+.mfilters button{height:34px}
+.mail-where{margin:0 2px}
+.mail-tools{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px}
+.mail-tools .actions{gap:6px}
+.btn[aria-pressed="true"]{background:var(--amber-soft);border-color:var(--amber);color:var(--amber)}
+.move select{height:32px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:0 8px;font:inherit;font-size:.875rem}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.mrow .when{display:inline-flex;align-items:center;gap:5px}
+.mrow .when .i{width:14px;height:14px;color:var(--ink-2)}
+.mrow .flag-on .i{color:var(--amber)}
+.mrow-tags{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.draft-tag{color:var(--red);font-weight:700}
+.sync-line{display:flex;align-items:center;gap:6px;font-size:.875rem}
+.sync-line .i{width:16px;height:16px;color:var(--green)}
+.mail-logo{background:#0F6CBD}.mail-gmail{background:#C5221F}.mail-icloud{background:#1F2937}.mail-imap{background:var(--ink-2)}
+.nav-tog{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:6px 0;border-top:1px solid var(--line)}
+.nav-tog span{display:flex;align-items:center;gap:10px;font-size:.9375rem}
+.nav-tog .i{width:18px;height:18px;color:var(--ink-2)}
+@media (max-width:1023px){
+  .mail-layout{grid-template-columns:minmax(0,1fr);gap:12px}
+  .mail-side{position:static;flex-direction:row;overflow-x:auto;gap:6px;padding-bottom:4px;scrollbar-width:none}
+  .mail-side::-webkit-scrollbar{display:none}
+  .mfold{width:auto;flex:none;border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:7px 12px}
+  .mf-sep{display:none}
+  .newfolder{flex:none}
+  .newfolder input{width:150px}
+}
+@media (max-width:767px){
+  .mfold,.mfilters button,.move select,.newfolder input{min-height:44px}
+  .mail-search{max-width:none;flex-basis:100%}
+  .mail-search input{height:46px}
+  .mail-search .i{top:14px}
+  .mfilters{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:100%}
+  .mfilters button{flex:none}
+  .mail-tools .actions .btn{flex:0 1 auto}
+  .page-head .actions{width:100%}
+  .page-head .actions .btn{flex:1;justify-content:center}
+}
+
 /* ===== Responsive: tablet 768–1023px and phone <768px. Nothing below applies at 1024px and wider. ===== */
 .search-btn,.search-close,.zoom-ctl{display:none}
 .menu-full{position:fixed;inset:0;z-index:45;background:var(--bg);overflow:auto;-webkit-overflow-scrolling:touch;
@@ -1049,6 +1107,10 @@ const ICONS={
   clip:'<path d="M21 11.5l-8.6 8.6a5 5 0 0 1-7.1-7.1l8.6-8.6a3.4 3.4 0 0 1 4.8 4.8l-8.6 8.6a1.7 1.7 0 0 1-2.4-2.4l7.9-7.9"/>',
   reply:'<path d="M9 14L4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 6 6v4"/>',
   pen:'<path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M14 6l4 4"/>',
+  archive:'<rect x="3" y="4" width="18" height="5" rx="1"/><path d="M5 9v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9M10 13h4"/>',
+  trash:'<path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/>',
+  flag:'<path d="M5 21V4M5 4h11l-2 4 2 4H5"/>',
+  plus:'<path d="M12 5v14M5 12h14"/>',
   walk:'<circle cx="13" cy="4" r="2"/><path d="M10 22l2-7-3-3 1-5 4 3 3 1M8 13l-2 4"/>'
 };
 const icon=(n,cls='i')=>`<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true">${ICONS[n]||''}</svg>`;
@@ -1187,7 +1249,7 @@ const MENU=[['Svíčková with bread dumplings','98 Kč'],['Vegetable risotto wi
 const store={get(k,d){try{const v=localStorage.getItem('vsehub2.'+k);return v?JSON.parse(v):d}catch(_){return d}},set(k,v){try{localStorage.setItem('vsehub2.'+k,JSON.stringify(v))}catch(_){}}};
 const state={view:'today',course:null,courseTab:'weeks',calOffset:0,calDay:null,taskFilter:'open',
   done:null,exams:new Set(store.get('exams',['stats-1'])),chat:[],taskSort:'start'};
-const settings=Object.assign({cal:{apple:false,google:false,outlook:false},sync:'manual'},store.get('settings',{}));
+const settings=Object.assign({cal:{apple:false,google:false,outlook:false},sync:'manual',mail:{provider:'outlook',connected:true,sync:'auto',imapServer:'imap.example.org',imapEmail:'anna@example.org'},hidden:[]},store.get('settings',{}));
 const saveSettings=()=>store.set('settings',settings);
 const saved=new Set(store.get('savedCourses',[]));
 /* v2: one source of truth per task: step 0–4 (Brief read, Working, Uploaded, Submitted), effort in hours, uploaded file */
@@ -1349,7 +1411,7 @@ function openMenu(){
   const m=$('#menu');
   m.innerHTML=`<div class="menu-head"><h1>More</h1><button class="icon-btn" data-menuclose aria-label="Close menu">${icon('close')}</button></div>
    <button class="card row" data-go="settings" style="text-align:left;cursor:pointer;color:var(--ink)"><span class="avatar lg">${e(STUDENT.initials)}</span><span style="min-width:0"><b>${e(STUDENT.full)}</b><br><span class="small muted">${e(STUDENT.programme)} · semester ${STUDENT.semester}</span></span></button>
-   ${MENU.map(([g,items])=>`<div class="menu-group"><p class="eyebrow">${e(g)}</p><div class="more-list">${items.map(i=>`<button data-go="${i[0]}" ${state.view===i[0]?'aria-current="page"':''}><span class="ico">${icon(i[1])}</span><span><div class="t">${e(i[2])}${i[0]==='mail'&&unreadCount()?` <span class="pill blue" style="margin-left:6px">${unreadCount()} new</span>`:''}</div><div class="s">${e(i[3])}</div></span><span class="chev">${icon('right')}</span></button>`).join('')}</div></div>`).join('')}
+   ${MENU.map(([g,items])=>[g,items.filter(i=>!isHidden(i[0]))]).filter(([,items])=>items.length).map(([g,items])=>`<div class="menu-group"><p class="eyebrow">${e(g)}</p><div class="more-list">${items.map(i=>`<button data-go="${i[0]}" ${state.view===i[0]?'aria-current="page"':''}><span class="ico">${icon(i[1])}</span><span><div class="t">${e(i[2])}${i[0]==='mail'&&unreadCount()?` <span class="pill blue" style="margin-left:6px">${unreadCount()} new</span>`:''}</div><div class="s">${e(i[3])}</div></span><span class="chev">${icon('right')}</span></button>`).join('')}</div></div>`).join('')}
    <p class="small muted" style="text-align:center">Student prototype – not an official VŠE service · v2</p>`;
   m.hidden=false;document.body.style.overflow='hidden';const c=m.querySelector('[data-menuclose]');c&&c.focus();
 }
@@ -1360,7 +1422,7 @@ const ZOOMS=[1,1.5,2,3];
 const zoomBar=()=>{const z=state.mapZoom||1;return`<div class="zoom-ctl"><span>Zoom ${Math.round(z*100)} %</span><button data-zoom="-1" aria-label="Zoom out" ${z<=1?'disabled':''}>−</button><button data-zoom="1" aria-label="Zoom in" ${z>=3?'disabled':''}>+</button></div>`};
 const withZoom=svg=>svg.replace(/^<svg class="(floor|campus)"/,m=>`${m} style="--z:${state.mapZoom||1}"`);
 function render(){
-  markNav();setCounts();
+  markNav();setCounts();applyNav();
   const r={today,calendar,courses,course:courseView,tasks,registration,exams,grades,documents,assistant,more,focus,cafeteria,library,buildings,map:mapView,settings:settingsView,mail:mailView}[state.view]||today;
   view.innerHTML=`<div class="view" style="display:flex;flex-direction:column;gap:22px">${r()}</div>`;
   stackTables(view);closeMenu();closeSearch();
@@ -1477,6 +1539,34 @@ function fitCal(){
 }
 
 /* --- Settings --- */
+// v2.1: mail sync (provider choice like the calendar) and which sidebar sections are shown
+function mailSettings(){
+  const m=settings.mail;const P=MAIL_PROVIDERS[m.provider];
+  return`<section class="card" id="mail-sync"><div class="card-head"><div><h2>Mail sync</h2><p class="small muted" style="margin-top:2px">Study Hub shows a simplified view of your mailbox. Choose your provider; reading, sending, archiving and folders stay in sync with it.</p></div></div>
+    <div class="radio-list" role="radiogroup" aria-label="Mail provider">${Object.entries(MAIL_PROVIDERS).map(([k,v])=>`<button class="radio" role="radio" aria-checked="${m.provider===k}" data-mprov="${k}"><span class="dot"></span><span><b>${e(v.name)}</b><span class="s">${e(v.hint)}</span></span></button>`).join('')}</div>
+    ${m.provider==='imap'?`<form id="imap-form" class="form-grid" style="margin-top:12px"><div class="field"><label class="flabel" for="imap-server">IMAP server</label><input id="imap-server" value="${e(m.imapServer)}" autocomplete="off"></div><div class="field"><label class="flabel" for="imap-email">Email address</label><input id="imap-email" type="email" value="${e(m.imapEmail)}" autocomplete="off"></div><div class="full actions"><button class="btn primary" type="submit">Save and connect</button></div></form>`:''}
+    <div class="cal-opt" style="margin-top:12px"><span class="cal-logo mail-logo mail-${m.provider}">${icon('mail')}</span><div style="min-width:0;flex:1"><div class="t">${e(P.name)}</div><div class="s">${m.connected?'Connected · '+e(mailAccount()):'Not connected'}</div></div><span class="small muted">${m.connected?'Connected':'Connect'}</span><button class="switch" role="switch" aria-checked="${!!m.connected}" aria-label="Connect ${e(P.name)}" data-mconnect></button></div>
+    <p class="eyebrow" style="margin:16px 0 8px">How should mail sync?</p>
+    <div class="radio-list" role="radiogroup" aria-label="Mail sync mode">
+      <button class="radio" role="radio" aria-checked="${m.sync==='auto'}" data-msyncmode="auto"><span class="dot"></span><span><b>Sync new mail automatically</b><span class="s">New mail, read status, archive and folders update every few minutes.</span></span></button>
+      <button class="radio" role="radio" aria-checked="${m.sync==='manual'}" data-msyncmode="manual"><span class="dot"></span><span><b>Sync manually</b><span class="s">Mail updates when you press “Sync now” in Mail.</span></span></button></div></section>`;
+}
+const NAV_SECTIONS=[['My studies',[['calendar','calendar','Calendar'],['courses','book','Courses'],['mail','mail','Mail'],['tasks','check','Tasks'],['focus','moon','Focus']]],
+  ['Campus',[['cafeteria','food','Cafeteria'],['library','seat','Library & study rooms'],['buildings','building','Buildings & rooms'],['map','map','Indoor map']]],
+  ['Organisation',[['registration','register','Course registration'],['exams','exam','Exams'],['grades','grades','Grades & credits'],['documents','folder','Documents']]],
+  ['Help',[['assistant','chat','Study assistant']]]];
+const isHidden=v=>settings.hidden.includes(v);
+function navSettings(){
+  return`<section class="card" id="nav-settings"><div class="card-head"><div><h2>Sidebar sections</h2><p class="small muted" style="margin-top:2px">Choose which pages appear in the menu. Today and Settings always stay.</p></div>${settings.hidden.length?'<button class="link" data-navall>Show all</button>':''}</div>
+    ${NAV_SECTIONS.map(([g,items])=>`<p class="eyebrow" style="margin:12px 0 4px">${e(g)}</p>${items.map(([id,ic,name])=>`<div class="nav-tog"><span>${icon(ic)}${e(name)}</span><button class="switch" role="switch" aria-checked="${!isHidden(id)}" aria-label="Show ${e(name)}" data-navtoggle="${id}"></button></div>`).join('')}`).join('')}</section>`;
+}
+// Hide the sections switched off in Settings: sidebar, phone tab bar, top-bar mail icon (menus filter themselves)
+function applyNav(){
+  document.querySelectorAll('.nav-item[data-go]').forEach(b=>b.hidden=b.dataset.go!=='today'&&isHidden(b.dataset.go));
+  document.querySelectorAll('.side .nav-group').forEach(g=>{g.hidden=![...g.querySelectorAll('.nav-item')].some(b=>!b.hidden)});
+  document.querySelectorAll('.tabbar button[data-go]').forEach(b=>b.hidden=isHidden(b.dataset.go));
+  const mb=document.querySelector('.mail-btn');if(mb)mb.hidden=isHidden('mail');
+}
 function settingsView(){
   const anyConn=Object.values(settings.cal).some(Boolean);
   return `<header class="page-head"><div><p class="eyebrow">Profile</p><h1>Settings</h1></div></header>
@@ -1488,10 +1578,12 @@ function settingsView(){
          <button class="radio" role="radio" aria-checked="${settings.sync==='auto'}" data-syncmode="auto"><span class="dot"></span><span><b>Automatically sync all classes, deadlines and exams</b><span class="s">New deadlines, room changes and exam registrations update by themselves${anyConn?'.':'. Connect a calendar above first.'}</span></span></button>
          <button class="radio" role="radio" aria-checked="${settings.sync==='manual'}" data-syncmode="manual"><span class="dot"></span><span><b>Add items manually</b><span class="s">Use “Add to calendar” on a class, deadline or exam.</span></span></button>
        </div></section>
+     ${mailSettings()}
    </div><div class="col">
      <section class="card"><div class="card-head"><h2>Profile</h2></div>
        <div class="row" style="margin-bottom:14px"><div class="avatar lg">${e(STUDENT.initials)}</div><div><b>${e(STUDENT.full)}</b><div class="small muted">Student ID ${e(STUDENT.id)}</div></div></div>
        <dl class="facts" style="grid-template-columns:repeat(2,minmax(0,1fr));margin:0"><div><dt>Programme</dt><dd>${e(STUDENT.programme)}</dd></div><div><dt>Semester</dt><dd>${STUDENT.semester}rd semester</dd></div><div><dt>Faculty</dt><dd>${e(STUDENT.faculty)}</dd></div><div><dt>Term</dt><dd>${e(SEMESTER_LABEL)}</dd></div></dl></section>
+     ${navSettings()}
      <section class="card"><div class="card-head"><h2>About Study Hub</h2></div><p class="muted">Student prototype – not an official VŠE service. All people, names and personal data in it are fictional.</p></section>
    </div></div>`;
 }
@@ -1696,7 +1788,7 @@ function insisSheet(){
 function more(){
   const items=[['mail','mail','Mail','Inbox and messages to lecturers'],['focus','moon','Focus','Block apps, timers, focus modes'],['cafeteria','food','Cafeteria','Menu today and opening hours'],['library','seat','Library & study rooms','Book a seat or team room'],['buildings','building','Buildings & rooms','Opening hours and free rooms'],['map','map','Indoor map','Walking directions to any room'],['registration','register','Course registration','Credits, catalogue, registration dates'],['exams','exam','Exams','Register for exam dates'],['grades','grades','Grades & credits','Results and average'],['documents','folder','Documents','Confirmations, transcript, contacts'],['assistant','chat','Study assistant','Ask about deadlines, rooms, topics'],['settings','settings','Settings','Calendar sync and profile']];
   return `<header class="page-head"><div><p class="eyebrow">Focus, campus, organisation &amp; help</p><h1>More</h1></div></header>
-   <div class="more-list">${items.map(i=>`<button data-go="${i[0]}"><span class="ico">${icon(i[1])}</span><span><div class="t">${e(i[2])}${i[0]==='mail'&&unreadCount()?` <span class="pill blue" style="margin-left:6px">${unreadCount()} new</span>`:''}</div><div class="s">${e(i[3])}</div></span><span class="chev">${icon('right')}</span></button>`).join('')}</div>`;
+   <div class="more-list">${items.filter(i=>!isHidden(i[0])).map(i=>`<button data-go="${i[0]}"><span class="ico">${icon(i[1])}</span><span><div class="t">${e(i[2])}${i[0]==='mail'&&unreadCount()?` <span class="pill blue" style="margin-left:6px">${unreadCount()} new</span>`:''}</div><div class="s">${e(i[3])}</div></span><span class="chev">${icon('right')}</span></button>`).join('')}</div>`;
 }
 
 /* --- Assistant (rule-based for the prototype) --- */
@@ -2203,61 +2295,105 @@ function mapView(){
 }
 function navTo(q){state.map=state.map||{b:'NB',f:'3'};state.map.target=q;state.map.q=q;state.map.follow=true;state.map.stage='campus';closeSheet();go('map')}
 
-/* --- Mail (v2) --- */
-const MAIL_ME={name:STUDENT.full,email:'anna.kolarova@vse.example'};
+/* --- Mail (v2.1): simplified view of the synced mailbox, with folders, filters, search, archive and drafts --- */
+const MAIL_PROVIDERS={outlook:{name:'VŠE Outlook (Microsoft 365)',short:'VŠE Outlook',email:'anna.kolarova@vse.example',hint:'Your school mailbox · recommended'},
+  gmail:{name:'Gmail',short:'Gmail',email:'anna.k@gmail.example',hint:'Google account'},
+  icloud:{name:'Apple iCloud Mail',short:'iCloud Mail',email:'anna.k@icloud.example',hint:'Apple account'},
+  imap:{name:'Other (IMAP)',short:'IMAP',email:'',hint:'Any other provider with server settings'}};
+const mailAccount=()=>{const m=settings.mail;return m.provider==='imap'?(m.imapEmail||'anna@example.org'):MAIL_PROVIDERS[m.provider].email};
+const SYS_FOLDERS=[['inbox','Inbox','mail'],['drafts','Drafts','pen'],['sent','Sent','send'],['archive','Archive','archive'],['trash','Trash','trash']];
+let FOLDERS=store.get('mailFolders',[['team','Team project'],['courses','Courses']]);
 function mailSeed(){
-  const hw3=T['stats-hw3'];const mate=groupOf(C.om)[0].name;const at2=(n,hm)=>at(addDays(sod(NOW0),n),hm);
+  const hw3=T['stats-hw3'];const mate=groupOf(C.om)[0].name;const mateMail=mate.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(' ','.')+'@vse.example';
+  const d=(n,hm)=>at(addDays(sod(NOW0),n),hm).toISOString();
   return[
-   {id:'m1',from:'Ing. Radek Holeček, Ph.D.',email:'radek.holecek@vse.example',course:'stats',date:at2(0,'08:12'),subject:'Homework 3: new deadline',
+   {id:'m1',folder:'inbox',read:false,from:'Ing. Radek Holeček, Ph.D.',email:'radek.holecek@vse.example',course:'stats',date:d(0,'08:12'),subject:'Homework 3: new deadline',
     body:`Dear students,\n\nthe deadline for Homework 3 (Normal distribution) has moved from ${fmtLong(addDays(hw3.due,2))} to ${fmtLong(hw3.due)}, ${fmtTime(hw3.due)}, because of the midterm schedule.\n\nThe exercises stay the same (5.1–5.12). Please upload one PDF.\n\nBest regards,\nRadek Holeček`},
-   {id:'m2',from:mate,email:mate.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(' ','.')+'@vse.example',course:'om',date:at2(0,'09:40'),subject:'OM project – meeting on Thursday?',
+   {id:'m2',folder:'inbox',read:false,from:mate,email:mateMail,course:'om',date:d(0,'09:40'),subject:'OM project – meeting on Thursday?',
     body:'Hi Anna,\n\ncould we meet on Thursday after the seminar to finish the flowchart for our semester project? I booked a team room in the library from 14:00.\n\nSee you,\n'+mate.split(' ')[0]},
-   {id:'m3',from:'Ing. Simona Pazderová, Ph.D.',email:'simona.pazderova@vse.example',course:'mkt',date:at2(0,'07:30'),subject:'Quiz 4 opens today 11:00–11:20',
+   {id:'m3',folder:'inbox',read:true,flagged:true,from:'Ing. Simona Pazderová, Ph.D.',email:'simona.pazderova@vse.example',course:'mkt',date:d(0,'07:30'),subject:'Quiz 4 opens today 11:00–11:20',
     body:'Dear students,\n\nQuiz 4 (Pricing) is open today only, from 11:00 to 11:20. It has 8 questions and one attempt.\n\nKind regards,\nSimona Pazderová'},
-   {id:'m4',from:'Study Department',email:'study.fir@vse.example',course:null,date:at2(-1,'14:05'),subject:'Summer semester registration opens 4 January',
+   {id:'m4',folder:'inbox',read:true,from:'Study Department',email:'study.fir@vse.example',course:null,date:d(-1,'14:05'),subject:'Summer semester registration opens 4 January',
     body:'Dear students,\n\npre-registration for the summer semester 2026/27 runs from 4 to 8 January 2027. You can already save courses for registration in Study Hub.\n\nStudy Department, Faculty of International Relations'},
-   {id:'m5',from:'prof. Ing. Vilém Kořínek, CSc.',email:'vilem.korinek@vse.example',course:'micro',date:at2(-1,'10:20'),subject:'Problem set 4 – please confirm your submission',
+   {id:'m5',folder:'inbox',read:true,from:'prof. Ing. Vilém Kořínek, CSc.',email:'vilem.korinek@vse.example',course:'micro',date:d(-1,'10:20'),subject:'Problem set 4 – please confirm your submission',
     body:'Dear students,\n\nsome of you uploaded Problem set 4 but did not confirm the submission. Only confirmed submissions count.\n\nBest,\nVilém Kořínek'},
-   {id:'m6',from:'doc. Ing. Helena Vrbová, Ph.D.',email:'helena.vrbova@vse.example',course:'om',date:at2(-2,'16:45'),subject:'Seminar room change: RB 209',
+   {id:'m6',folder:'inbox',read:true,from:'doc. Ing. Helena Vrbová, Ph.D.',email:'helena.vrbova@vse.example',course:'om',date:d(-2,'16:45'),subject:'Seminar room change: RB 209',
     body:'Dear students,\n\nfrom this week our Wednesday seminar (12:45) takes place in RB 209 instead of RB 114.\n\nBest regards,\nHelena Vrbová'},
-   {id:'m7',from:'Ing. Kryštof Nedbal, Ph.D.',email:'krystof.nedbal@vse.example',course:'is',date:at2(-3,'11:00'),subject:'BPMN assignment: example model uploaded',
-    body:'Hello,\n\nI uploaded an example .bpmn model to the course materials. Use it as a starting point for the order-to-cash assignment.\n\nKryštof Nedbal'}];
+   {id:'m7',folder:'inbox',read:true,from:'Ing. Kryštof Nedbal, Ph.D.',email:'krystof.nedbal@vse.example',course:'is',date:d(-3,'11:00'),subject:'BPMN assignment: example model uploaded',file:'order-to-cash-example.bpmn',
+    body:'Hello,\n\nI attached an example .bpmn model. Use it as a starting point for the order-to-cash assignment.\n\nKryštof Nedbal'},
+   {id:'m8',folder:'team',read:true,from:mate,email:mateMail,course:'om',date:d(-6,'19:10'),subject:'Notes from our first team meeting',file:'meeting-notes.pdf',
+    body:'Hi both,\n\nattached are the notes from today. Next steps: Anna drafts the flowchart, I collect the capacity data.\n\n'+mate.split(' ')[0]},
+   {id:'m9',folder:'archive',read:true,from:'Study Department',email:'study.fir@vse.example',course:null,date:d(-50,'09:00'),subject:'Welcome to the winter semester 2026/27',
+    body:'Dear students,\n\nwelcome back! Your timetable, course registration and ISIC information are now available in Study Hub.\n\nStudy Department'},
+   {id:'s1',folder:'sent',read:true,from:STUDENT.full,to:'doc. Ing. Helena Vrbová, Ph.D.',course:'om',date:d(-4,'18:30'),subject:'Question about the semester project scope',
+    body:'Dear Ms Vrbová,\n\nmay our team analyse the returns process of an online shop instead of a production process?\n\nKind regards,\nAnna Kolářová'},
+   {id:'s2',folder:'drafts',read:true,from:STUDENT.full,to:'Seminar group 3SG305',course:'om',date:d(-1,'21:15'),subject:'Survey for our process analysis',body:'Hi all,\n\ncould you fill in our short survey about '}];
 }
-const MAILS=mailSeed();
-const SENT0=[{id:'s1',to:'doc. Ing. Helena Vrbová, Ph.D.',course:'om',date:at(addDays(sod(NOW0),-4),'18:30'),subject:'Question about the semester project scope',body:'Dear Ms Vrbová,\n\nmay our team analyse the returns process of an online shop instead of a production process?\n\nKind regards,\nAnna Kolářová'}];
-const mailRead=new Set(store.get('mailRead',['m3','m4','m5','m6','m7']));
-let mailSent=store.get('mailSent',null);if(!mailSent)mailSent=SENT0.map(m=>({...m,date:m.date.toISOString()}));
-const unreadCount=()=>MAILS.filter(m=>!mailRead.has(m.id)).length;
-const mailWhen=d=>{d=new Date(d);return sameDay(d,new Date())?fmtTime(d):fmtDay(d)};
+let MBOX=store.get('mailbox',null)||mailSeed();
+const saveMail=()=>{store.set('mailbox',MBOX);store.set('mailFolders',FOLDERS)};
+const mget=id=>MBOX.find(m=>m.id===id);
+const unreadCount=()=>MBOX.filter(m=>m.folder==='inbox'&&!m.read).length;
+const folderName=f=>(SYS_FOLDERS.find(x=>x[0]===f)||FOLDERS.find(x=>x[0]===f)||[f,f])[1];
+const LECTURERS=()=>COURSES.flatMap(c=>[c.lecturer,c.tutor]);
 const RECIPIENTS=()=>[...COURSES.map(c=>c.lecturer),'Seminar group 3SG305','Study Department'];
+const mailWhen=d=>{d=new Date(d);return sameDay(d,new Date())?fmtTime(d):fmtDay(d)};
+const MAIL_FILTERS=[['all','All'],['unread','Unread'],['flagged','Flagged'],['files','Attachments'],['lecturers','From lecturers']];
+function mailMatches(m){
+  const f=state.mailFilter||'all',q=(state.mailQ||'').trim().toLowerCase();
+  if(f==='unread'&&m.read)return false;if(f==='flagged'&&!m.flagged)return false;if(f==='files'&&!m.file)return false;if(f==='lecturers'&&!LECTURERS().includes(m.from))return false;
+  if(q&&!(m.subject+' '+m.from+' '+(m.to||'')+' '+m.body+' '+(m.course?C[m.course].name:'')).toLowerCase().includes(q))return false;
+  return true;
+}
+function mailListHtml(){
+  const fo=state.mailFolder||'inbox';const q=(state.mailQ||'').trim();
+  const list=MBOX.filter(m=>(q?m.folder!=='trash':m.folder===fo)&&mailMatches(m)).sort((a,b)=>new Date(b.date)-new Date(a.date));
+  const out=m=>m.folder==='sent'||m.folder==='drafts';
+  const row=m=>{const unread=!m.read;const c=m.course&&C[m.course];
+    return`<button class="mrow ${unread?'unread':''}" data-mail="${m.id}"><span class="udot" aria-label="${unread?'Unread':''}"></span><span class="mrow-main"><span class="mrow-top"><b class="who">${m.folder==='drafts'?'<span class="draft-tag">Draft</span> ':''}${e(out(m)?'To: '+m.to:m.from)}</b><span class="when">${m.flagged?`<span class="flag-on" aria-label="Flagged">${icon('flag')}</span>`:''}${m.file?icon('clip'):''}${e(mailWhen(m.date))}</span></span>
+      <span class="mrow-tags"><span class="course-chip" ${c?`style="--cc:${c.color}"`:''}>${c?`<span class="cdot"></span>${e(c.name)}`:'VŠE'}</span>${q?`<span class="pill grey">${e(folderName(m.folder))}</span>`:''}</span>
+      <span class="subj">${e(m.subject)}</span><span class="prev">${e(m.body.replace(/\s+/g,' ').slice(0,110))}</span></span></button>`};
+  return list.length?list.map(row).join(''):`<div class="empty">${q?`No mail matches “${e(q)}”.`:state.mailFilter&&state.mailFilter!=='all'?'No mail matches this filter.':`${e(folderName(fo))} is empty.`}</div>`;
+}
 function mailView(){
-  state.mailTab=state.mailTab||'inbox';
-  const head=`<header class="page-head"><div><p class="eyebrow">Messages</p><h1>Mail</h1></div><button class="btn primary" data-compose>${icon('pen')}New message</button></header>`;
+  const fo=state.mailFolder||'inbox';const conn=settings.mail.connected;const P=MAIL_PROVIDERS[settings.mail.provider];
+  const head=`<header class="page-head"><div><p class="eyebrow">Messages</p><h1>Mail</h1>
+     <p class="lede sync-line">${conn?`${icon('tick')}Synced with ${e(P.short)} · ${e(mailAccount())}${settings.mail.sync==='auto'?' · automatic':''}`:`${icon('info')}Not connected · showing the last synced copy`}</p></div>
+     <div class="actions"><button class="btn" data-msync>${icon('reply','i" style="transform:scaleX(-1) rotate(90deg)')}Sync now</button><button class="btn primary" data-compose>${icon('pen')}New message</button></div></header>
+   ${conn?'':`<div class="notice">${icon('info')}<span>Connect your mailbox to send and receive. <button class="link" data-go="settings">Mail sync settings</button></span></div>`}`;
+  const folderBtn=([id,name,ic])=>{const n=id==='inbox'?unreadCount():id==='drafts'?MBOX.filter(m=>m.folder==='drafts').length:0;
+    return`<button class="mfold" aria-current="${fo===id&&!state.mailOpen&&!state.compose?'page':'false'}" data-mfolder="${id}">${icon(ic)}<span>${e(name)}</span>${n?`<b>${n}</b>`:''}</button>`};
+  const side=`<nav class="mail-side" aria-label="Mail folders">${SYS_FOLDERS.map(folderBtn).join('')}<span class="mf-sep">Folders</span>${FOLDERS.map(([id,name])=>folderBtn([id,name,'folder'])).join('')}
+     ${state.newFolder?`<form id="newfolder-form" class="newfolder"><input id="nf-name" placeholder="Folder name" aria-label="Folder name" maxlength="30"><button class="btn sm primary" type="submit">Add</button></form>`:`<button class="mfold add" data-newfolder>${icon('plus')}<span>New folder</span></button>`}</nav>`;
+  let main;
   if(state.compose){const c=state.compose;
-    return`${head}<section class="card mail-card"><div class="card-head"><h2>${c.subject&&c.subject.startsWith('Re:')?'Reply':'New message'}</h2><button class="link" data-mailback>Cancel</button></div>
+    main=`<section class="card mail-card"><div class="card-head"><h2>${c.mode==='reply'?'Reply':c.mode==='fwd'?'Forward':c.draftId?'Edit draft':'New message'}</h2><button class="link" data-mailback>Cancel</button></div>
      <form id="compose-form" class="compose" novalidate>
        <div class="field"><label class="flabel" for="mc-to">To</label><input id="mc-to" value="${e(c.to||'')}" autocomplete="off"><div class="err" id="err-to" hidden>Add a recipient.</div>
          <div class="chipset rcpt">${RECIPIENTS().map(r=>`<button type="button" data-rcpt="${e(r)}">${e(r.replace(/^(prof\.|doc\.)?\s*(Ing\.|Mgr\.)\s*/,'').replace(/,.*$/,''))}</button>`).join('')}</div></div>
        <div class="field"><label class="flabel" for="mc-subj">Subject</label><input id="mc-subj" value="${e(c.subject||'')}" autocomplete="off"><div class="err" id="err-subj" hidden>Add a subject.</div></div>
-       <div class="field"><label class="flabel" for="mc-body">Message</label><textarea id="mc-body" rows="7">${e(c.body||'')}</textarea></div>
-       <div class="field"><label class="flabel" for="mc-file">Attachment (optional)</label><input id="mc-file" type="file"></div>
-       <div class="actions"><button class="btn primary" type="submit">${icon('send')}Send</button><button class="btn" type="button" data-mailback>Cancel</button></div></form></section>`;}
-  if(state.mailOpen){const sent=state.mailTab==='sent';const m=sent?mailSent.find(x=>x.id===state.mailOpen):MAILS.find(x=>x.id===state.mailOpen);
-    if(m){const c=m.course&&C[m.course];
-    return`${head}<section class="card mail-card"><button class="back" data-mailback>${icon('left')}${sent?'Sent':'Inbox'}</button>
-      <h2 style="margin-top:10px">${e(m.subject)}</h2>
-      <dl class="mail-meta"><div><dt>From</dt><dd>${e(sent?MAIL_ME.name:m.from)}${sent?'':` <span class="muted small">&lt;${e(m.email)}&gt;</span>`}</dd></div><div><dt>To</dt><dd>${e(sent?m.to:MAIL_ME.name)}</dd></div><div><dt>Date</dt><dd>${e(fmtLong(new Date(m.date)))}, ${fmtTime(new Date(m.date))}</dd></div>${c?`<div><dt>Course</dt><dd><span class="course-chip" style="--cc:${c.color}"><span class="cdot"></span>${e(c.name)}</span></dd></div>`:''}</dl>
-      <div class="mail-body">${e(m.body).replace(/\n/g,'<br>')}</div>${m.file?`<p class="small muted">${icon('clip','i" style="width:15px;height:15px;vertical-align:-3px')} ${e(m.file)}</p>`:''}
-      <div class="actions">${sent?'':`<button class="btn primary" data-reply="${m.id}">${icon('reply')}Reply</button>`}<button class="btn" data-mailback>Back</button></div></section>`;}
-    state.mailOpen=null;}
-  const list=state.mailTab==='sent'?[...mailSent].sort((a,b)=>new Date(b.date)-new Date(a.date)):MAILS;
-  const row=m=>{const sent=state.mailTab==='sent';const unread=!sent&&!mailRead.has(m.id);const c=m.course&&C[m.course];
-    return`<button class="mrow ${unread?'unread':''}" data-mail="${m.id}"><span class="udot" aria-label="${unread?'Unread':''}"></span><span class="mrow-main"><span class="mrow-top"><b class="who">${e(sent?'To: '+m.to:m.from)}</b><span class="when">${e(mailWhen(m.date))}</span></span>
-      <span class="course-chip" ${c?`style="--cc:${c.color}"`:''}>${c?`<span class="cdot"></span>${e(c.name)}`:'VŠE'}</span>
-      <span class="subj">${e(m.subject)}</span><span class="prev">${e(m.body.replace(/\s+/g,' ').slice(0,110))}</span></span></button>`};
-  return`${head}<div class="tabs" role="tablist"><button role="tab" aria-selected="${state.mailTab==='inbox'}" data-mailtab="inbox">Inbox${unreadCount()?` <span class="pill blue" style="margin-left:4px">${unreadCount()}</span>`:''}</button><button role="tab" aria-selected="${state.mailTab==='sent'}" data-mailtab="sent">Sent</button></div>
-   <section class="card mail-list">${list.length?list.map(row).join(''):'<div class="empty">No messages.</div>'}</section>`;
+       <div class="field"><label class="flabel" for="mc-body">Message</label><textarea id="mc-body" rows="8">${e(c.body||'')}</textarea></div>
+       <div class="field"><label class="flabel" for="mc-file">Attachment (optional)</label>${c.file?`<span class="small muted">${icon('clip','i" style="width:15px;height:15px;vertical-align:-3px')} ${e(c.file)} (forwarded)</span>`:''}<input id="mc-file" type="file"></div>
+       <div class="actions"><button class="btn primary" type="submit">${icon('send')}Send</button><button class="btn" type="button" data-savedraft>${icon('pen')}Save draft</button><button class="btn" type="button" data-mailback>Cancel</button></div></form></section>`;
+  }else if(state.mailOpen&&mget(state.mailOpen)){const m=mget(state.mailOpen);const c=m.course&&C[m.course];const out=m.folder==='sent';
+    const moveOpts=[...SYS_FOLDERS.filter(x=>!['drafts','sent'].includes(x[0])),...FOLDERS].filter(x=>x[0]!==m.folder).map(([id,name])=>`<option value="${id}">${e(name)}</option>`).join('');
+    main=`<section class="card mail-card"><div class="mail-tools"><button class="back" data-mailback>${icon('left')}${e(folderName(m.folder))}</button>
+       <span class="actions">${m.folder==='trash'?`<button class="btn sm" data-mrestore="${m.id}">${icon('mail')}Restore</button><button class="btn sm" data-mdestroy="${m.id}">${icon('trash')}Delete forever</button>`
+        :`${m.folder!=='archive'&&!out?`<button class="btn sm" data-marchive="${m.id}">${icon('archive')}Archive</button>`:m.folder==='archive'?`<button class="btn sm" data-mrestore="${m.id}">${icon('mail')}Move to Inbox</button>`:''}<button class="btn sm" data-mdelete="${m.id}">${icon('trash')}Delete</button>`}
+       <button class="btn sm" data-mflag="${m.id}" aria-pressed="${!!m.flagged}">${icon('flag')}${m.flagged?'Flagged':'Flag'}</button>${out?'':`<button class="btn sm" data-munread="${m.id}">${icon('mail')}Mark unread</button>`}
+       <label class="move"><span class="sr">Move to folder</span><select id="mail-move" data-id="${m.id}"><option value="">Move to…</option>${moveOpts}</select></label></span></div>
+      <h2 style="margin-top:12px">${e(m.subject)}</h2>
+      <dl class="mail-meta"><div><dt>From</dt><dd>${e(out?STUDENT.full:m.from)}${out?'':` <span class="muted small">&lt;${e(m.email)}&gt;</span>`}</dd></div><div><dt>To</dt><dd>${e(out?m.to:STUDENT.full)}</dd></div><div><dt>Date</dt><dd>${e(fmtLong(new Date(m.date)))}, ${fmtTime(new Date(m.date))}</dd></div>${c?`<div><dt>Course</dt><dd><span class="course-chip" style="--cc:${c.color}"><span class="cdot"></span>${e(c.name)}</span></dd></div>`:''}</dl>
+      <div class="mail-body">${e(m.body).replace(/\n/g,'<br>')}</div>${m.file?`<button class="li file-link" data-file="${e(m.file)}|Attachment|${m.course||''}">${icon('clip')}<span>${e(m.file)}</span><span class="sub">Attachment</span></button>`:''}
+      <div class="actions" style="margin-top:14px">${out?'':`<button class="btn primary" data-reply="${m.id}">${icon('reply')}Reply</button>`}<button class="btn" data-fwd="${m.id}">${icon('send')}Forward</button></div></section>`;
+  }else{state.mailOpen=null;
+    main=`<div class="mail-toolbar"><label class="mail-search">${icon('search')}<input id="mail-q" type="search" placeholder="Search mail" value="${e(state.mailQ||'')}" autocomplete="off" aria-label="Search mail"></label>
+      <div class="chipset mfilters" role="group" aria-label="Filter mail">${MAIL_FILTERS.map(([id,l])=>`<button aria-pressed="${(state.mailFilter||'all')===id}" data-mfilter="${id}">${l}</button>`).join('')}</div></div>
+     <p class="small muted mail-where">${(state.mailQ||'').trim()?'Search results in all folders':e(folderName(fo))}</p>
+     <section class="card mail-list" id="mail-list">${mailListHtml()}</section>`;}
+  return`${head}<div class="mail-layout">${side}<div class="mail-main">${main}</div></div>`;
 }
+function openMail(id){const m=mget(id);if(m.folder==='drafts'){state.compose={to:m.to,subject:m.subject,body:m.body,draftId:m.id};state.mailOpen=null}else{state.mailOpen=id;if(!m.read){m.read=true;saveMail()}}render();window.scrollTo({top:0})}
+function moveMail(id,folder,msg){const m=mget(id);m.folder=folder;saveMail();state.mailOpen=null;toast(msg||`Moved to ${folderName(folder)}`);render()}
 
 /* --- Sheets --- */
 function sessionSheet(s,brief=false){
@@ -2360,11 +2496,29 @@ document.addEventListener('click',async ev=>{
   if(d.calday){state.calDay=d.calday;render();return}
   if(d.tfilter){state.taskFilter=d.tfilter;render();return}
   if(d.tsort){state.taskSort=d.tsort;render();return}
+  if(d.mprov){const k=d.mprov;if(settings.mail.provider!==k){settings.mail.provider=k;settings.mail.connected=false;saveSettings();toast(k==='imap'?'Enter your server details to connect':`${MAIL_PROVIDERS[k].name} selected · switch on Connect to sync`)}render();return}
+  if(d.mconnect!==undefined){settings.mail.connected=!settings.mail.connected;saveSettings();toast(settings.mail.connected?`Mail connected · ${mailAccount()}`:'Mail disconnected');render();return}
+  if(d.msyncmode){settings.mail.sync=d.msyncmode;saveSettings();toast(d.msyncmode==='auto'?'Mail now syncs automatically':'Mail syncs when you press “Sync now”');render();return}
+  if(d.navtoggle){const v=d.navtoggle;settings.hidden=isHidden(v)?settings.hidden.filter(x=>x!==v):[...settings.hidden,v];saveSettings();const n=NAV_SECTIONS.flatMap(g=>g[1]).find(x=>x[0]===v)[2];toast(isHidden(v)?`${n} hidden from the menu`:`${n} shown in the menu`);render();return}
+  if(d.navall!==undefined){settings.hidden=[];saveSettings();toast('All sections shown');render();return}
   if(d.compose!==undefined){state.compose={to:'',subject:'',body:''};state.mailOpen=null;go('mail');return}
-  if(d.mailtab){state.mailTab=d.mailtab;state.mailOpen=null;state.compose=null;render();return}
-  if(d.mail){state.mailOpen=d.mail;if(state.mailTab!=='sent'&&!mailRead.has(d.mail)){mailRead.add(d.mail);store.set('mailRead',[...mailRead])}render();window.scrollTo({top:0});return}
+  if(d.mfolder){state.mailFolder=d.mfolder;state.mailOpen=null;state.compose=null;state.mailQ='';state.newFolder=false;render();return}
+  if(d.mfilter){state.mailFilter=d.mfilter;render();return}
+  if(d.mail){openMail(d.mail);return}
   if(d.mailback!==undefined){state.mailOpen=null;state.compose=null;render();return}
-  if(d.reply){const m=MAILS.find(x=>x.id===d.reply);state.compose={to:m.from,subject:'Re: '+m.subject.replace(/^Re:\s*/,''),body:`\n\n— ${m.from} wrote:\n${m.body.split('\n').slice(0,4).join('\n')}`};render();window.scrollTo({top:0});return}
+  if(d.reply){const m=mget(d.reply);state.compose={mode:'reply',to:m.from,subject:'Re: '+m.subject.replace(/^Re:\s*/,''),body:`\n\n— ${m.from} wrote:\n${m.body.split('\n').slice(0,4).join('\n')}`};render();window.scrollTo({top:0});return}
+  if(d.fwd){const m=mget(d.fwd);state.compose={mode:'fwd',to:'',subject:'Fwd: '+m.subject.replace(/^Fwd:\s*/,''),body:`\n\n— Forwarded message from ${m.from}:\n${m.body}`,file:m.file||''};render();window.scrollTo({top:0});return}
+  if(d.marchive){moveMail(d.marchive,'archive','Archived');return}
+  if(d.mdelete){moveMail(d.mdelete,'trash','Moved to Trash');return}
+  if(d.mrestore){moveMail(d.mrestore,'inbox','Moved to Inbox');return}
+  if(d.mdestroy){MBOX=MBOX.filter(m=>m.id!==d.mdestroy);saveMail();state.mailOpen=null;toast('Deleted forever');render();return}
+  if(d.mflag){const m=mget(d.mflag);m.flagged=!m.flagged;saveMail();toast(m.flagged?'Flagged':'Flag removed');render();return}
+  if(d.munread){const m=mget(d.munread);m.read=false;saveMail();state.mailOpen=null;toast('Marked as unread');render();return}
+  if(d.newfolder!==undefined){state.newFolder=true;render();const i=$('#nf-name');i&&i.focus();return}
+  if(d.msync!==undefined){if(!settings.mail.connected){toast('Connect your mailbox in Settings first');return}toast(`Up to date · synced with ${MAIL_PROVIDERS[settings.mail.provider].short}`);return}
+  if(d.savedraft!==undefined){const c=state.compose||{};const to=$('#mc-to').value.trim(),subj=$('#mc-subj').value.trim(),body=$('#mc-body').value;
+    if(c.draftId){Object.assign(mget(c.draftId),{to,subject:subj||'(no subject)',body,date:new Date().toISOString()})}else MBOX.push({id:'d'+Date.now(),folder:'drafts',read:true,from:STUDENT.full,to,course:null,date:new Date().toISOString(),subject:subj||'(no subject)',body});
+    saveMail();state.compose=null;state.mailFolder='drafts';toast('Draft saved');render();return}
   if(d.rcpt){const i=$('#mc-to');if(i){i.value=d.rcpt;$('#err-to').hidden=true;i.removeAttribute('aria-invalid')}return}
   if(d.nextclass){sessionSheet(S[d.nextclass],true);return}
   if(d.seen){changesSeen.has(d.seen)?changesSeen.delete(d.seen):changesSeen.add(d.seen);store.set('changesSeen',[...changesSeen]);render();return}
@@ -2445,9 +2599,13 @@ document.addEventListener('submit',ev=>{
   if(ev.target.id==='compose-form'){ev.preventDefault();const to=$('#mc-to').value.trim(),subj=$('#mc-subj').value.trim();
     $('#err-to').hidden=!!to;$('#err-subj').hidden=!!subj;$('#mc-to').toggleAttribute('aria-invalid',!to);$('#mc-subj').toggleAttribute('aria-invalid',!subj);
     if(!to||!subj){(to?$('#mc-subj'):$('#mc-to')).focus();return}
-    const f=$('#mc-file').files[0];const c=COURSES.find(x=>to.includes(x.lecturer.replace(/,.*$/,''))||to.includes(x.code));
-    mailSent.push({id:'s'+Date.now(),to,course:c?c.id:null,date:new Date().toISOString(),subject:subj,body:$('#mc-body').value,file:f?f.name:''});store.set('mailSent',mailSent);
-    state.compose=null;state.mailOpen=null;state.mailTab='inbox';toast('Sent');render();return}
+    if(!settings.mail.connected){toast('Connect your mailbox in Settings to send');return}
+    const f=$('#mc-file').files[0];const c=COURSES.find(x=>to.includes(x.lecturer.replace(/,.*$/,''))||to.includes(x.code));const cs=state.compose||{};
+    if(cs.draftId)MBOX=MBOX.filter(m=>m.id!==cs.draftId);
+    MBOX.push({id:'s'+Date.now(),folder:'sent',read:true,from:STUDENT.full,to,course:c?c.id:null,date:new Date().toISOString(),subject:subj,body:$('#mc-body').value,file:f?f.name:(cs.file||'')});saveMail();
+    state.compose=null;state.mailOpen=null;state.mailFolder='inbox';toast('Sent');render();return}
+  if(ev.target.id==='newfolder-form'){ev.preventDefault();const n=$('#nf-name').value.trim();if(!n){state.newFolder=false;render();return}const id='f'+Date.now();FOLDERS.push([id,n]);saveMail();state.newFolder=false;state.mailFolder=id;toast(`Folder “${n}” created`);render();return}
+  if(ev.target.id==='imap-form'){ev.preventDefault();settings.mail.imapServer=$('#imap-server').value.trim();settings.mail.imapEmail=$('#imap-email').value.trim();settings.mail.connected=true;saveSettings();toast(`Connected to ${settings.mail.imapServer}`);render();return}
   if(ev.target.id==='upload-form'){ev.preventDefault();const f=$('#up-file').files[0];if(!f){toast('Choose a file first');return}const id=state.uploading;tst(id).file=f.name;setStep(id,3);toast(`Uploaded: ${f.name} · confirm to finish`);taskSheet(T[id]);render()}
   if(ev.target.id==='insis-form'){ev.preventDefault();closeSheet();toast('Request sent. Library staff confirm it by email within two working days.')}
   if(ev.target.id==='sched-form'){ev.preventDefault();const days=[...document.querySelectorAll('#sf-days [aria-pressed="true"]')].map(b=>Number(b.dataset.sfday));if(!days.length){toast('Choose at least one day');return}
@@ -2459,6 +2617,9 @@ document.addEventListener('click',ev=>{
 });
 document.addEventListener('keydown',ev=>{const cb=ev.target.closest&&ev.target.closest('[data-campus]');if(cb&&(ev.key==='Enter'||ev.key===' ')){ev.preventDefault();openCampus(cb.dataset.campus)}});
 function openCampus(k){const m=state.map;if(k==='LIB'){m.target='Library';m.q='Library';m.follow=true;m.stage='floor';render();return}if(!CAMPUS[k]||!CAMPUS[k].b){m.pick=k;m.target=null;m.q='';m.stage='campus';render();return}const b=CAMPUS[k].b;const t=m.target&&findPlace(m.target);if(t&&t.b!==b){m.target=null;m.q=''}m.b=b;m.f=t&&t.b===b?t.f:(BLD_INFO[b].floors.includes('1')?'1':'0');m.stage='floor';render()}
+// mail: search updates only the list so the cursor stays in the field; "Move to…" moves the open mail
+document.addEventListener('input',ev=>{if(ev.target.id==='mail-q'){state.mailQ=ev.target.value;const l=$('#mail-list');if(l)l.innerHTML=mailListHtml();const w=$('.mail-where');if(w)w.textContent=state.mailQ.trim()?'Search results in all folders':folderName(state.mailFolder||'inbox')}});
+document.addEventListener('change',ev=>{if(ev.target.id==='mail-move'&&ev.target.value)moveMail(ev.target.dataset.id,ev.target.value)});
 document.addEventListener('input',ev=>{
   if(ev.target.id==='fd-h'||ev.target.id==='fd-m'){
     const h=Math.max(0,Math.min(8,parseInt($('#fd-h').value||'0',10)||0)),mi=Math.max(0,Math.min(59,parseInt($('#fd-m').value||'0',10)||0));
